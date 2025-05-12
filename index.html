@@ -26,13 +26,6 @@
       margin-bottom: 10px;
     }
 
-    .sidebar img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-
     .sidebar nav ul {
       list-style: none;
       padding: 0;
@@ -86,32 +79,17 @@
       color: #777;
     }
 
-    .required:after {
-      content: " *";
+    .required {
       color: red;
+      margin-left: 5px;
     }
 
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-    }
-
-    .form-group label {
-      display: block;
-      font-weight: bold;
-    }
-
-    button {
-      padding: 10px 20px;
-      background-color: #111;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #444;
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -119,8 +97,8 @@
 
   <!-- Sidebar -->
   <div class="sidebar">
-    <!-- Add Photo Above Name -->
-    <img src="your-photo.jpg" alt="Your Photo"> <!-- Replace "your-photo.jpg" with your photo file path -->
+    <!-- Profile Image -->
+    <img src="your-photo-url.jpg" alt="Profile Picture" class="profile-image">
     <h1>Md Kausar Hamid Miji</h1>
     <p>Electrical Engineer (IT, Telecom, Cybersecurity)</p>
     <nav>
@@ -177,17 +155,17 @@
       <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace "your-form-id" with your Formspree form ID -->
         <div class="form-row">
           <div class="form-group">
-            <label for="firstName" class="required">First Name</label>
+            <label for="firstName">First Name <span class="required">*</span></label>
             <input type="text" id="firstName" name="firstName" required>
           </div>
           <div class="form-group">
-            <label for="lastName" class="required">Last Name</label>
+            <label for="lastName">Last Name <span class="required">*</span></label>
             <input type="text" id="lastName" name="lastName" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="email" class="required">Email Address</label>
+            <label for="email">Email Address <span class="required">*</span></label>
             <input type="email" id="email" name="email" required>
           </div>
           <div class="form-group">
@@ -196,8 +174,8 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="message" class="required">Message</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
         <button type="submit">Submit</button>
       </form>
