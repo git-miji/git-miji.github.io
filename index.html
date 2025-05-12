@@ -79,6 +79,80 @@
       color: #777;
     }
 
+    /* Job Experience */
+    #experience {
+        margin: 40px 0;
+    }
+
+    .experience-item {
+        margin-bottom: 35px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .experience-item h3 {
+        color: #111;
+        margin-bottom: 5px;
+        font-size: 1.4em;
+    }
+
+    .company-duration {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 15px;
+    }
+
+    .company-duration strong {
+        color: #2c3e50;
+        font-size: 1.1em;
+    }
+
+    .duration {
+        color: #666;
+        font-style: italic;
+    }
+
+    .roles-heading {
+        color: #111;
+        margin: 15px 0 10px;
+        font-size: 1.1em;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+
+    .roles-list {
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    .roles-list li {
+        position: relative;
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+
+    .roles-list li::before {
+        content: "•";
+        color: #111;
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    @media (max-width: 768px) {
+        .company-duration {
+            flex-direction: column;
+        }
+        
+        .duration {
+            margin-top: 5px;
+        }
+    }
+    
     /* Contact Form Styles */
     form {
       max-width: 700px;
@@ -172,10 +246,24 @@
     <section id="Experience">
       <h2>Experience</h2>
       <ul>
-        <li><strong>Designation: Assistant Manager (Technical)</strong></li>
-          <li><strong> Company Name: Bangladesh Telecommunications Company Limited</strong></li>
-      </ul>
-    </section>
+    <!-- Individual Experience Item -->
+    <div class="experience-item">
+        <h3>Network Engineer</h3>
+        <div class="company-duration">
+            <strong>Tech Solutions Inc.</strong>
+            <span class="duration">Jan 2020 - Present</span>
+        </div>
+        
+        <h4 class="roles-heading">Major Roles:</h4>
+        <ul class="roles-list">
+            <li>Testing & Configuring Routers, Switches, Servers</li>
+            <li>Network Infrastructure Design and Implementation</li>
+            <li>Cybersecurity Monitoring and Threat Analysis</li>
+        </ul>
+    </div>
+
+    <!-- Add more experience items as needed -->
+</section>
     
     <section id="projects">
       <h2>Projects</h2>
