@@ -139,12 +139,85 @@
 </section>
 
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: your.email@example.com</p>
-      <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-      <p>GitHub: <a href="#">github.com/yourusername</a></p>
-    </section>
+<div class="contact-form">
+  <h2>Contact Us</h2>
+  <form>
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="firstName">First Name*</label>
+        <input type="text" id="firstName" placeholder="Type first name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name*</label>
+        <input type="text" id="lastName" placeholder="Type last name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Work Email*</label>
+        <input type="email" id="email" placeholder="Type work email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Mobile Phone</label>
+        <input type="tel" id="phone" placeholder="Type phone number">
+      </div>
+
+      <div class="form-group">
+        <label for="state">State</label>
+        <select id="state">
+          <option selected disabled>Please Select</option>
+          <option>California</option>
+          <option>Texas</option>
+          <option>New York</option>
+          <!-- Add more -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country">
+          <option selected disabled>Please Select</option>
+          <option>United States</option>
+          <option>Canada</option>
+          <option>India</option>
+          <!-- Add more -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="industry">Company Industry*</label>
+        <select id="industry" required>
+          <option selected disabled>Please Select</option>
+          <option>IT</option>
+          <option>Finance</option>
+          <option>Healthcare</option>
+          <!-- Add more -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="interest">What area(s) are you interested in?</label>
+        <select id="interest">
+          <option selected disabled>Please Select</option>
+          <option>Cybersecurity</option>
+          <option>Cloud Services</option>
+          <option>Automation</option>
+          <!-- Add more -->
+        </select>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="info">Additional Information</label>
+        <textarea id="info" placeholder="How can we help?"></textarea>
+      </div>
+    </div>
+
+    <div class="submit-btn">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
 
     <footer>
       <p>&copy; 2025 Your Name. All rights reserved.</p>
