@@ -78,6 +78,65 @@
       font-size: 14px;
       color: #777;
     }
+
+    /* Contact Form Styles */
+    form {
+      max-width: 700px;
+      margin-top: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      padding: 12px 20px;
+      background-color: #111;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #444;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
@@ -101,7 +160,7 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        Hello! I’m an experienced professional in the IT and telecommunications sector, committed to advancing community access to reliable technology services. I        I’m currently pursuing a Master’s in Electrical Engineering (graduating December 2025), following a Master’s in Computer Science and Engineering (2024) 
+        Hello! I’m an experienced professional in the IT and telecommunications sector, committed to advancing community access to reliable technology services. I’m currently pursuing a Master’s in Electrical Engineering (graduating December 2025), following a Master’s in Computer Science and Engineering (2024) 
         and a Bachelor’s in Electrical & Electronic Engineering (2013). With a strong technical foundation and proven leadership and administrative skills, 
         I’m well-positioned to excel in technical operations, management, support, and sales—while building stakeholder trust through service excellence and 
         innovation.
@@ -116,60 +175,58 @@
       </ul>
     </section>
 
-<section id="values-skills">
-  <h2 style="text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px;">Values, Skills & Interests</h2>
-  <table style="width: 100%; border-collapse: collapse; font-family: Georgia, serif;">
-    <tr>
-      <td style="font-weight: bold; padding: 8px; vertical-align: top;">Personal Values</td>
-      <td style="padding: 8px;">Honesty, Family, Integrity, Respect, Gratitude, Well-being, Self-respect, Personal-growth.</td>
-    </tr>
-    <tr>
-      <td style="font-weight: bold; padding: 8px; vertical-align: top;">Soft Skills</td>
-      <td style="padding: 8px;">Leadership, Empathy, Teamwork, Communication, Adaptive, Active Listening, Analytical.</td>
-    </tr>
-    <tr>
-      <td style="font-weight: bold; padding: 8px; vertical-align: top;">Technical Skills</td>
-      <td style="padding: 8px;">Kali Linux, TCP/IP, OWASP, Nmap, Wireshark, Machine Learning, MATLAB, Python, C++ (Basic), Nessus, Git, SQL, Microsoft Office Tools.</td>
-    </tr>
-    <tr>
-      <td style="font-weight: bold; padding: 8px; vertical-align: top;">Interests</td>
-      <td style="padding: 8px;">IT, Cybersecurity, SIEM, Control System, Telecommunication Services, etc.</td>
-    </tr>
-  </table>
-</section>
+    <section id="values-skills">
+      <h2 style="text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px;">Values, Skills & Interests</h2>
+      <table style="width: 100%; border-collapse: collapse; font-family: Georgia, serif;">
+        <tr>
+          <td style="font-weight: bold; padding: 8px; vertical-align: top;">Personal Values</td>
+          <td style="padding: 8px;">Honesty, Family, Integrity, Respect, Gratitude, Well-being, Self-respect, Personal-growth.</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold; padding: 8px; vertical-align: top;">Soft Skills</td>
+          <td style="padding: 8px;">Leadership, Empathy, Teamwork, Communication, Adaptive, Active Listening, Analytical.</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold; padding: 8px; vertical-align: top;">Technical Skills</td>
+          <td style="padding: 8px;">Kali Linux, TCP/IP, OWASP, Nmap, Wireshark, Machine Learning, MATLAB, Python, C++ (Basic), Nessus, Git, SQL, Microsoft Office Tools.</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold; padding: 8px; vertical-align: top;">Interests</td>
+          <td style="padding: 8px;">IT, Cybersecurity, SIEM, Control System, Telecommunication Services, etc.</td>
+        </tr>
+      </table>
+    </section>
 
-
-<section id="Contact">
+    <section id="Contact">
       <h2>Contact</h2>
       <form>
         <div class="form-row">
           <div class="form-group">
             <label for="firstName">First Name</label>
-            <input type="text" id="firstName" required>
+            <input type="text" id="firstName" name="firstName" required>
           </div>
           <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" required>
+            <input type="text" id="lastName" name="lastName" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" name="email" required>
           </div>
           <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone">
+            <input type="tel" id="phone" name="phone">
           </div>
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" rows="4" required></textarea>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
         <button type="submit">Submit</button>
       </form>
     </section>
-
 
     <footer>
       <p>&copy; 2025 Your Name. All rights reserved.</p>
