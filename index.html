@@ -26,6 +26,13 @@
       margin-bottom: 10px;
     }
 
+    .sidebar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
     .sidebar nav ul {
       list-style: none;
       padding: 0;
@@ -79,63 +86,32 @@
       color: #777;
     }
 
-    /* Contact Form Styles */
-    form {
-      max-width: 700px;
-      margin-top: 20px;
+    .required:after {
+      content: " *";
+      color: red;
     }
 
-    .form-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .form-group {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 20px;
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
     }
 
     .form-group label {
-      margin-bottom: 6px;
+      display: block;
       font-weight: bold;
-      font-size: 14px;
     }
 
-    .form-group input,
-    .form-group textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
-      font-family: inherit;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    button[type="submit"] {
-      padding: 12px 20px;
+    button {
+      padding: 10px 20px;
       background-color: #111;
       color: white;
       border: none;
-      border-radius: 6px;
-      font-size: 16px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
-    button[type="submit"]:hover {
+    button:hover {
       background-color: #444;
-    }
-
-    @media (max-width: 600px) {
-      .form-row {
-        flex-direction: column;
-      }
     }
   </style>
 </head>
@@ -143,6 +119,8 @@
 
   <!-- Sidebar -->
   <div class="sidebar">
+    <!-- Add Photo Above Name -->
+    <img src="your-photo.jpg" alt="Your Photo"> <!-- Replace "your-photo.jpg" with your photo file path -->
     <h1>Md Kausar Hamid Miji</h1>
     <p>Electrical Engineer (IT, Telecom, Cybersecurity)</p>
     <nav>
@@ -160,10 +138,7 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        Hello! I’m an experienced professional in the IT and telecommunications sector, committed to advancing community access to reliable technology services. I’m currently pursuing a Master’s in Electrical Engineering (graduating December 2025), following a Master’s in Computer Science and Engineering (2024) 
-        and a Bachelor’s in Electrical & Electronic Engineering (2013). With a strong technical foundation and proven leadership and administrative skills, 
-        I’m well-positioned to excel in technical operations, management, support, and sales—while building stakeholder trust through service excellence and 
-        innovation.
+        Hello! I’m an experienced professional in the IT and telecommunications sector, committed to advancing community access to reliable technology services. I’m currently pursuing a Master’s in Electrical Engineering (graduating December 2025), following a Master’s in Computer Science and Engineering (2024) and a Bachelor’s in Electrical & Electronic Engineering (2013). With a strong technical foundation and proven leadership and administrative skills, I’m well-positioned to excel in technical operations, management, support, and sales—while building stakeholder trust through service excellence and innovation.
       </p>
     </section>
 
@@ -199,20 +174,20 @@
 
     <section id="Contact">
       <h2>Contact</h2>
-      <form>
+      <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace "your-form-id" with your Formspree form ID -->
         <div class="form-row">
           <div class="form-group">
-            <label for="firstName">First Name</label>
+            <label for="firstName" class="required">First Name</label>
             <input type="text" id="firstName" name="firstName" required>
           </div>
           <div class="form-group">
-            <label for="lastName">Last Name</label>
+            <label for="lastName" class="required">Last Name</label>
             <input type="text" id="lastName" name="lastName" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="email">Email Address</label>
+            <label for="email" class="required">Email Address</label>
             <input type="email" id="email" name="email" required>
           </div>
           <div class="form-group">
@@ -221,15 +196,15 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="message" class="required">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
         </div>
         <button type="submit">Submit</button>
       </form>
     </section>
 
     <footer>
-      <p>&copy; 2025 Your Name. All rights reserved.</p>
+      <p>&copy; 2025 Md Kausar Hamid Miji. All rights reserved.</p>
     </footer>
   </div>
 
