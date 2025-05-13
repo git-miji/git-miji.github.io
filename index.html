@@ -242,12 +242,10 @@
         <div class="experience-item">
           
           <p>
-            
-        Hello! I’m an experienced professional in the IT and telecommunications sector, committed to advancing community access to reliable technology services. 
-        I’m currently pursuing a Master’s in Electrical Engineering (graduating December 2025), following a Master’s in Computer Science and Engineering (2024) 
-        and a Bachelor’s in Electrical & Electronic Engineering (2013). With a strong technical foundation and proven leadership and administrative skills, 
-        I’m well-positioned to excel in technical operations, management, support, and sales—while building stakeholder trust through service excellence and 
-        innovation.
+            I am an MS student in Electrical Engineering in the Electrical Engineering and Computer Science Department at the South Dakota School of Mines
+            & Technology (SDSMT). Prior to that, I completed an MS in Computer Science and Engineering from SDSMT in May 2024. I earned my bachelor's degree 
+            from Chittagong University of Engineering & Technology in 2013. My research focuses on the security of Cyber-Physical Systems, Cybersecurity, 
+            Machine Learning, Physics-Informed Neural Networks, and Identifying Non-linear System Dynamics using Machine Learning.
           </p>
           
         </div>
@@ -309,7 +307,7 @@
         
     <!-- Add more experience items as needed -->
 
-      <div class="experience-item">
+  <div class="experience-item">
         <h3>Assistant Engineer</h3>
         <div class="company-duration">
             <strong>DigiCon Telecommunications Company Limited</strong>
@@ -327,6 +325,12 @@
     
     <section id="projects">
       <h2>Projects</h2>
+      <div class="experience-item">
+        <strong>Assistant Engineer</strong>
+        <p>erberos Protocol:</strong>Delivered an in-depth analysis of the Kerberos Protocol suite, outlining its critical functions in enhancing 
+          network security and ensuring secure authentication within computer networks<a href="https://www.youtube.com/watch?v=tn3_QMKewK8&t=4s">(Demo Link)
+          </a>.</p>
+      </div>
       <ul>
         <li><strong>Kerberos Protocol:</strong>Delivered an in-depth analysis of the Kerberos Protocol suite, outlining its critical functions in enhancing 
           network security and ensuring secure authentication within computer networks<a href="https://www.youtube.com/watch?v=tn3_QMKewK8&t=4s">(Demo Link)
@@ -410,31 +414,6 @@
       </div>
     </div>
 </section>
-
-<script>
-  // Handle form submission using JavaScript
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission (page reload)
-
-    var formData = new FormData(this);
-    
-    // Send the form data to Formspree
-    fetch("https://formspree.io/f/xqaqyzdp", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Hide the form and display the success message
-      document.getElementById("contact-form").style.display = "none";
-      document.getElementById("thank-you-message").style.display = "block";
-    })
-    .catch(error => {
-      console.error("Error submitting form:", error);
-      // Optionally, handle the error (e.g., show a failure message)
-    });
-  });
-</script>
 
 
     <footer>
