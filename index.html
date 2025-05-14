@@ -195,7 +195,18 @@
       margin-top: 4px;
       display: block;
     }
-     
+
+  .form-group small {
+    font-size: 0.85em;
+    margin-top: 4px;
+    display: block;
+    color: #e63946; /* soft red */
+    transition: opacity 0.2s ease;
+  }
+  input:invalid {
+    border-color: #e63946;
+  }
+    
     textarea {
       resize: vertical;
     }
@@ -601,24 +612,35 @@
 <!--**************************************************************************************************************** -->
 
 <script>
-  document.querySelector('form').addEventListener('submit', function(event) {
-    const email = document.getElementById('email');
-    const phone = document.getElementById('phone');
-    
+  document.addEventListener("DOMContentLoaded", function () {
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const emailError = document.getElementById("emailError");
+    const phoneError = document.getElementById("phoneError");
+
     const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
     const phonePattern = /^\+?[0-9\s\-]{7,15}$/;
 
-    if (!emailPattern.test(email.value)) {
-      alert('Please enter a valid email address.');
-      event.preventDefault();  // Prevent form submission
-    }
+    emailInput.addEventListener("input", function () {
+      if (emailInput.value === "" || emailPattern.test(emailInput.value)) {
+        emailError.style.display = "none";
+      } else {
+        emailError.textContent = "Please enter a valid email address.";
+        emailError.style.display = "block";
+      }
+    });
 
-    if (!phonePattern.test(phone.value)) {
-      alert('Please enter a valid phone number.');
-      event.preventDefault();  // Prevent form submission
-    }
+    phoneInput.addEventListener("input", function () {
+      if (phoneInput.value === "" || phonePattern.test(phoneInput.value)) {
+        phoneError.style.display = "none";
+      } else {
+        phoneError.textContent = "Please enter a valid phone number.";
+        phoneError.style.display = "block";
+      }
+    });
   });
-</script>           
+</script>
+       
 
             
       <!-- Success Message (Initially Hidden) -->
