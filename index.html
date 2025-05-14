@@ -595,53 +595,28 @@
 <!--**************************************************************************************************************** -->
 <!--Java Script For Validating Email and Phone Number -->
 <!--**************************************************************************************************************** -->
-
-  <script>
-document.querySelector("form").addEventListener("submit", function(event) {
-  const emailInput = document.getElementById("email");
-  const phoneInput = document.getElementById("phone");
-  const email = emailInput.value.trim();
-  const phone = phoneInput.value.trim();
-
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-  const phonePattern = /^\+?[1-9][0-9\s\-()]{6,19}$/;
-
-  const emailError = document.getElementById("emailError");
-  const phoneError = document.getElementById("phoneError");
-
-  let valid = true;
-
-  // Clear previous errors
-  emailError.textContent = "";
-  phoneError.textContent = "";
-  emailError.style.display = "none";
-  phoneError.style.display = "none";
-
-  // Email validation
-  if (!emailPattern.test(email)) {
-    emailError.textContent = "Please enter a valid email address.";
-    emailError.style.display = "block";
-    valid = false;
+<script>
+document.getElementById("email").addEventListener("input", function () {
+  const email = this.value.trim();
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+  const error = document.getElementById("emailError");
+  if (pattern.test(email)) {
+    error.textContent = "";
+    error.style.display = "none";
   }
+});
 
-  // Phone validation
-  if (!phonePattern.test(phone)) {
-    phoneError.textContent = "Please enter a valid phone number.";
-    phoneError.style.display = "block";
-    valid = false;
-  }
-
-  // Prevent form submission if not valid
-  if (!valid) {
-    event.preventDefault();
-    if (!emailPattern.test(email)) {
-      emailInput.focus();
-    } else {
-      phoneInput.focus();
-    }
+document.getElementById("phone").addEventListener("input", function () {
+  const phone = this.value.trim();
+  const pattern = /^\+?[0-9\s\-()]{7,20}$/;
+  const error = document.getElementById("phoneError");
+  if (pattern.test(phone)) {
+    error.textContent = "";
+    error.style.display = "none";
   }
 });
 </script>
+
             
       <!-- Success Message (Initially Hidden) -->
       <div id="thank-you-message" style="display: none;">
