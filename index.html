@@ -565,22 +565,21 @@
         </div>
 
 <!--****************************************************** -->
-<!-- Email & Phone Block -->
+<!-- Email & Phone Field -->
 <!--****************************************************** -->
 
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Type your email" required>
-            <span id="emailError" class="error-message" style="color: red; font-size: 0.9em;"></span>
-          </div>
-          
-           <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Type your phone number" required>
-            <span id="phoneError" class="error-message" style="color: red; font-size: 0.9em;"></span>
-            </div> 
-          </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Type your email" required>
+        <small id="emailError" style="color:red; display:none;"></small>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Type your phone number" required>
+        <small id="phoneError" style="color:red; display:none;"></small>
+      </div>
+    </div>
 
 <!--****************************************************** -->
 <!-- Message Block -->
@@ -637,7 +636,6 @@ document.querySelector("form").addEventListener("submit", function(event) {
   }
 });
 </script>
-
             
       <!-- Success Message (Initially Hidden) -->
       <div id="thank-you-message" style="display: none;">
