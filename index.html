@@ -539,7 +539,12 @@
       <h2>Contact</h2>
           <div class="experience-item">
           <form  action="https://formspree.io/f/xqaqyzdp" method="POST">
-        <div class="form-row">
+
+<!--****************************************************** -->
+<!-- Name Block -->
+<!--****************************************************** -->
+            
+          <div class="form-row">
           <div class="form-group">
             <label for="firstName">First Name</label>
             <input type="text" id="firstName" name="firstName" placeholder="Type your first name" required>
@@ -550,24 +555,34 @@
             <input type="text" id="lastName" name="lastName" placeholder="Type your last name" required>
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="Type your email" required>
-          </div>
-          
-           <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <!-- <input type="tel" id="phone" name="phone"> -------->
-            <input type ="tel" id = "phone" name="phone" placeholder="Type your phone number" required>
-            </div> 
-          </div>
+
+<!--****************************************************** -->
+<!-- Contacts Block -->
+<!--****************************************************** -->
+            
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Type your email" required>
+          <span id="emailError" class="error-message" style="color: red; font-size: 0.9em;"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Type your phone number" required>
+          <span id="phoneError" class="error-message" style="color: red; font-size: 0.9em;"></span>
+        </div>
+
+<!--****************************************************** -->
+<!-- Message Block -->
+<!--****************************************************** -->
+            
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
           <button type="submit">Submit</button>
       </form>
+  
 <!--**************************************************************************************************************** -->
 <!--For Validating Email and Phone Number -->
 <!--**************************************************************************************************************** -->
