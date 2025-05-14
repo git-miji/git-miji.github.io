@@ -568,18 +568,18 @@
 <!-- Email & Phone Field -->
 <!--****************************************************** -->
 
-    <div class="form-row">
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Type your email" required>
-        <small id="emailError" style="color:red; display:none;"></small>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Type your email" required>
+          <small id="emailError" style="color:red; display:none;"></small>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" placeholder="Type your phone number" required>
+          <small id="phoneError" style="color:red; display:none;"></small>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="Type your phone number" required>
-        <small id="phoneError" style="color:red; display:none;"></small>
-      </div>
-    </div>
 
 <!--****************************************************** -->
 <!-- Message Block -->
@@ -596,53 +596,52 @@
 <!--Java Script For Validating Email and Phone Number -->
 <!--**************************************************************************************************************** -->
 
-    <script>
-    document.querySelector("form").addEventListener("submit", function(event) {
-      const emailInput = document.getElementById("email");
-      const phoneInput = document.getElementById("phone");
-      const email = emailInput.value.trim();
-      const phone = phoneInput.value.trim();
-    
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i; // universal email format
-      const phonePattern = /^\+?[0-9\s\-()]{7,20}$/; // universal phone format
-    
-      const emailError = document.getElementById("emailError");
-      const phoneError = document.getElementById("phoneError");
-    
-      let valid = true;
-    
-      // Clear previous errors
-      emailError.textContent = "";
-      phoneError.textContent = "";
-      emailError.style.display = "none";
-      phoneError.style.display = "none";
-    
-      // Email validation
-      if (!emailPattern.test(email)) {
-        emailError.textContent = "Please enter a valid email address.";
-        emailError.style.display = "block";
-        valid = false;
-      }
-    
-      // Phone validation
-      if (!phonePattern.test(phone)) {
-        phoneError.textContent = "Please enter a valid phone number.";
-        phoneError.style.display = "block";
-        valid = false;
-      }
-    
-      // Prevent form submission if not valid
-      if (!valid) {
-        event.preventDefault();
-        if (!emailPattern.test(email)) {
-          emailInput.focus();
-        } else {
-          phoneInput.focus();
-        }
-      }
-    });
-    </script>
+  <script>
+document.querySelector("form").addEventListener("submit", function(event) {
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const email = emailInput.value.trim();
+  const phone = phoneInput.value.trim();
 
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+  const phonePattern = /^\+?[1-9][0-9\s\-()]{6,19}$/;
+
+  const emailError = document.getElementById("emailError");
+  const phoneError = document.getElementById("phoneError");
+
+  let valid = true;
+
+  // Clear previous errors
+  emailError.textContent = "";
+  phoneError.textContent = "";
+  emailError.style.display = "none";
+  phoneError.style.display = "none";
+
+  // Email validation
+  if (!emailPattern.test(email)) {
+    emailError.textContent = "Please enter a valid email address.";
+    emailError.style.display = "block";
+    valid = false;
+  }
+
+  // Phone validation
+  if (!phonePattern.test(phone)) {
+    phoneError.textContent = "Please enter a valid phone number.";
+    phoneError.style.display = "block";
+    valid = false;
+  }
+
+  // Prevent form submission if not valid
+  if (!valid) {
+    event.preventDefault();
+    if (!emailPattern.test(email)) {
+      emailInput.focus();
+    } else {
+      phoneInput.focus();
+    }
+  }
+});
+</script>
             
       <!-- Success Message (Initially Hidden) -->
       <div id="thank-you-message" style="display: none;">
