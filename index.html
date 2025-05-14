@@ -571,12 +571,16 @@
       <div class="form-row">
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="Type your email" required>
+          <input type="email" id="email" name="email" placeholder="Type your email" 
+           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
           <small id="emailError" style="color:red; display:none;"></small>
         </div>
         <div class="form-group">
           <label for="phone">Phone Number</label>
-          <input type="text" id="phone" name="phone" placeholder="Type your phone number" required>
+          <input type="tel" id="phone" name="phone" placeholder="Type your phone number" 
+       pattern="^\+?[0-9\s\-]{7,15}$" required>
+
           <small id="phoneError" style="color:red; display:none;"></small>
         </div>
       </div>
@@ -595,27 +599,26 @@
 <!--**************************************************************************************************************** -->
 <!--Java Script For Validating Email and Phone Number -->
 <!--**************************************************************************************************************** -->
-<script>
-document.getElementById("email").addEventListener("input", function () {
-  const email = this.value.trim();
-  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-  const error = document.getElementById("emailError");
-  if (pattern.test(email)) {
-    error.textContent = "";
-    error.style.display = "none";
-  }
-});
 
-document.getElementById("phone").addEventListener("input", function () {
-  const phone = this.value.trim();
-  const pattern = /^\+?[0-9\s\-()]{7,20}$/;
-  const error = document.getElementById("phoneError");
-  if (pattern.test(phone)) {
-    error.textContent = "";
-    error.style.display = "none";
-  }
-});
-</script>
+<script>
+  document.querySelector('form').addEventListener('submit', function(event) {
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    
+    const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    const phonePattern = /^\+?[0-9\s\-]{7,15}$/;
+
+    if (!emailPattern.test(email.value)) {
+      alert('Please enter a valid email address.');
+      event.preventDefault();  // Prevent form submission
+    }
+
+    if (!phonePattern.test(phone.value)) {
+      alert('Please enter a valid phone number.');
+      event.preventDefault();  // Prevent form submission
+    }
+  });
+</script>           
 
             
       <!-- Success Message (Initially Hidden) -->
