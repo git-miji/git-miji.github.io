@@ -12,16 +12,21 @@
     }
 
     /* Topbar spans full width */
-    .topbar {
-      background-color: #111;
-      color: white;
-      width: 100%;
-      padding: 15px 30px;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.topbar {
+  background-color: #111;
+  color: white;
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;   /* 🔹 makes it stick */
+  top: 0;            /* 🔹 stick to top */
+  left: 0;           /* 🔹 start at left edge */
+  z-index: 1000;     /* 🔹 stay above other content */
+}
 
     .topbar h1 {
       font-size: 20px;
@@ -50,7 +55,7 @@
     /* Main content with 1 inch margin left and right */
     .main-content {
       margin: 0 1in;
-      padding: 30px 0;
+      padding: 80px 0 30px 0;  /* top padding = topbar height + some space */
     }
 
     h2 {
