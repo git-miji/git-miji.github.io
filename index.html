@@ -59,23 +59,17 @@
 /* Photo Slider */
 .slider {
   position: relative;
-  width: 100%;
-  max-width: 400px;   /* adjust to fit */
+  width: 600px;    /* fixed width */
+  height: 400px;   /* fixed height */
   margin: 20px auto;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
 }
 
 .slides img {
   width: 100%;
-  border-radius: 12px;
+  height: 100%;    /* force images to match slider height */
+  object-fit: cover; /* crop nicely instead of stretching */
 }
 
 /* Navigation buttons */
