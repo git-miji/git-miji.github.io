@@ -11,6 +11,34 @@
       background: #f5f5f5;
     }
 
+    /* Hero Photo Banner */
+    .hero-photo {
+      position: relative;
+      width: 100%;
+      max-height: 200px;
+      overflow: hidden;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      width: 90%;
+    }
+
     /* Topbar */
     .topbar {
       background-color: #111;
@@ -21,6 +49,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -49,7 +78,6 @@
     .topbar nav ul li a:hover {
       color: #f39c12;
     }
-
     /* Profile Photo below Topbar */
     .profile-photo-container {
       text-align: center;
@@ -65,13 +93,7 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
-    /* Hero Photo Banner (optional if you want another banner later) */
-    .hero-photo img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
+    
     /* Main content */
     .main-content {
       margin: 0 1in;
@@ -143,19 +165,26 @@
         flex-direction: column;
       }
 
-      .main-content {
-        margin: 0 20px;
+      .hero-text {
+        font-size: 18px;
       }
 
-      .profile-photo-container img {
-        width: 120px;
-        height: 120px;
+      .main-content {
+        margin: 0 20px;
       }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Hero Photo Banner -->
+  <div class="hero-photo">
+    <img src="ocean-banner.jpg" alt="Profile Photo">
+    <div class="hero-text">
+      "Whatever the mind of man can conceive and believe, it can achieve" <br> — Napoleon Hill
+    </div>
+  </div>
 
   <!-- Topbar -->
   <div class="topbar">
