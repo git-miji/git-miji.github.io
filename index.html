@@ -55,6 +55,51 @@
     padding: 40px;
     overflow-y: auto;
   }
+
+/* Photo Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 900px;   /* adjust to fit */
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+  
 </style>
 
 </head>
@@ -83,9 +128,28 @@
 
 
 <!--**************************************************************************************************************** -->
+<!-- Photo Slider -->
+<!--**************************************************************************************************************** -->
+
+<!-- Photo Slider -->
+<div class="slider">
+  <div class="slides">
+    <img src="git-miji.github.io/miji.jpg" alt="Photo 1">
+    <img src="git-miji.github.io/miji.jpg" alt="Photo 2">
+    <img src="git-miji.github.io/miji.jpg" alt="Photo 3">
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+<!--**************************************************************************************************************** -->
 <!--About Me Section -->
 <!--**************************************************************************************************************** -->
 
+
+
+
+
+  
   <!-- Main Content -->
   <div class="main">
     <section id="About">
@@ -399,82 +463,34 @@
 </section>
 
 <!--**************************************************************************************************************** -->
-<!--Contact Section -->
-    <!--
-    <section id="Contact">
-      <h2>Contact</h2>
-          <div class="experience-item">
-          <form  action="https://formspree.io/f/xqaqyzdp" method="POST">
-    -->
+<!-- Java Script for Photo Slider -->
 <!--**************************************************************************************************************** -->
+
+<script>
+  const slides = document.querySelector('.slides');
+  const images = document.querySelectorAll('.slides img');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  let index = 0;
+
+  function showSlide(i) {
+    if (i < 0) index = images.length - 1;
+    else if (i >= images.length) index = 0;
+    else index = i;
+    slides.style.transform = `translateX(${-index * 100}%)`;
+  }
+
+  prevBtn.addEventListener('click', () => showSlide(index - 1));
+  nextBtn.addEventListener('click', () => showSlide(index + 1));
+
+  // Auto-slide every 5s
+  setInterval(() => showSlide(index + 1), 5000);
+</script>
+
+
+
     
-<!--**************************************************************************************************************** -->
-<!-- Name Block -->
-
-            <!--
-          <div class="form-row">
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Type your first name" required>
-          </div>
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Type your last name" required>
-          </div>
-        </div>
-            -->
-<!--**************************************************************************************************************** -->
-            
-
-
-<!--**************************************************************************************************************** -->
-<!-- Email & Phone Field -->
-            <!--
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="Type your email" 
-           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-
-          <small id="emailError" style="color:red; display:none;"></small>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="Type your phone number" 
-       pattern="^\+?[0-9\s\-]{7,15}$" required>
-
-          <small id="phoneError" style="color:red; display:none;"></small>
-        </div>
-      </div>
-            
-            -->
-<!--**************************************************************************************************************** -->
-
-
-
-<!--**************************************************************************************************************** -->
-<!-- Message Block -->
-            <!--
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit">Submit</button>
-      </form>
-            -->
-<!--**************************************************************************************************************** -->
-  
-<!--**************************************************************************************************************** -->
-      <!-- Success Message (Initially Hidden) -->
-            <!--
-      <div id="thank-you-message" style="display: none;">
-        <h3>Thank you so much for contacting me. I will get back to you soon.</h3>
-      </div> 
-            -->
-<!--**************************************************************************************************************** -->
-
-
 
     <footer>
       <p>&copy; 2025 Md Kausar Hamid Miji. All rights reserved.</p>
