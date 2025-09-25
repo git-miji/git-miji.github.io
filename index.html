@@ -11,22 +11,49 @@
       background: #f5f5f5;
     }
 
-    /* Topbar spans full width */
-.topbar {
-  background-color: #111;
-  color: white;
-  width: 100%;
-  padding: 15px 30px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    /* Hero Photo Banner */
+    .hero-photo {
+      position: relative;
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+    }
 
-  position: fixed;   /* 🔹 makes it stick */
-  top: 0;            /* 🔹 stick to top */
-  left: 0;           /* 🔹 start at left edge */
-  z-index: 1000;     /* 🔹 stay above other content */
-}
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      width: 90%;
+    }
+
+    /* Topbar */
+    .topbar {
+      background-color: #111;
+      color: white;
+      width: 100%;
+      padding: 15px 30px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
     .topbar h1 {
       font-size: 20px;
@@ -52,10 +79,10 @@
       color: #f39c12;
     }
 
-    /* Main content with 1 inch margin left and right */
+    /* Main content */
     .main-content {
       margin: 0 1in;
-      padding: 80px 0 30px 0;  /* top padding = topbar height + some space */
+      padding: 30px 0;
     }
 
     h2 {
@@ -81,11 +108,74 @@
       font-size: 16px;
       line-height: 1.6;
     }
+
+    .company-duration {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+
+    .duration {
+      color: #666;
+      font-style: italic;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Georgia, serif;
+    }
+
+    table td {
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    table td:first-child {
+      font-weight: bold;
+    }
+
+    footer {
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+      font-size: 14px;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .company-duration {
+        flex-direction: column;
+      }
+
+      .hero-text {
+        font-size: 18px;
+      }
+
+      .main-content {
+        margin: 0 20px;
+      }
+    }
   </style>
 </head>
 
   <body>
 
+<!--**************************************************************************************************************** -->
+  <!-- Hero Photo Banner -->
+<!--**************************************************************************************************************** -->
+  <div class="hero-photo">
+    <img src="miji.jpg" alt="Profile Photo">
+    <div class="hero-text">
+      "Whatever the mind of man can conceive and believe, it can achieve" <br> — Napoleon Hill
+    </div>
+  </div>
+
+
+
+    
 <!--**************************************************************************************************************** -->
 <!--Side Bar -->
 <!--**************************************************************************************************************** -->
