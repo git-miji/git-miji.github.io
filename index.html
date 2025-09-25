@@ -56,21 +56,18 @@
     overflow-y: auto;
   }
 
-/* Photo Slider */
-.slider {
-  position: relative;
-  width: 600px;    /* fixed width */
-  height: 400px;   /* fixed height */
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 12px;
-}
+ /* Fixed photo section */
+    .photo {
+      text-align: center;
+      margin-top: 20px;
+    }
 
-.slides img {
-  width: 100%;
-  height: 100%;    /* force images to match slider height */
-  object-fit: cover; /* crop nicely instead of stretching */
-}
+    .photo img {
+      width: 300px;   /* 👈 control width */
+      height: auto;   /* keeps aspect ratio */
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
 
 /* Navigation buttons */
 .prev, .next {
@@ -133,17 +130,10 @@
 <!--**************************************************************************************************************** -->
 <!-- Photo Slider -->
 <!--**************************************************************************************************************** -->
-
-<!-- Photo Slider -->
-<div class="slider">
-  <div class="slides">
-    <img src="https://git-miji.github.io/miji.jpg" alt="Photo 1">
-    <img src="https://git-miji.github.io/miji.jpg" alt="Photo 2">
-    <img src="https://git-miji.github.io/miji.jpg" alt="Photo 3">
+  <!-- Fixed Photo -->
+  <div class="photo">
+    <img src="https://git-miji.github.io/miji.jpg" alt="My Photo">
   </div>
-  <button class="prev">&#10094;</button>
-  <button class="next">&#10095;</button>
-</div>
 
       <h2>About Me</h2>
         <div class="experience-item">
@@ -453,36 +443,6 @@
             
   </div>
 </section>
-
-<!--**************************************************************************************************************** -->
-<!-- Java Script for Photo Slider -->
-<!--**************************************************************************************************************** -->
-
-<script>
-  const slides = document.querySelector('.slides');
-  const images = document.querySelectorAll('.slides img');
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
-
-  let index = 0;
-
-  function showSlide(i) {
-    if (i < 0) index = images.length - 1;
-    else if (i >= images.length) index = 0;
-    else index = i;
-    slides.style.transform = `translateX(${-index * 100}%)`;
-  }
-
-  prevBtn.addEventListener('click', () => showSlide(index - 1));
-  nextBtn.addEventListener('click', () => showSlide(index + 1));
-
-  // Auto-slide every 5s
-  setInterval(() => showSlide(index + 1), 5000);
-</script>
-
-
-
-    
 
     <footer>
       <p>&copy; 2025 Md Kausar Hamid Miji. All rights reserved.</p>
