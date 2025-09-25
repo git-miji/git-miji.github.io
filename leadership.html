@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Experience</title>
+  <title>Miji's Portfolio</title>
   <style>
     body {
       margin: 0;
@@ -11,7 +11,35 @@
       background: #f5f5f5;
     }
 
-    /* Topbar spans full width */
+    /* Hero Photo Banner */
+    .hero-photo {
+      position: relative;
+      width: 100%;
+      max-height: 200px;
+      overflow: hidden;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      width: 90%;
+    }
+
+    /* Topbar */
     .topbar {
       background-color: #111;
       color: white;
@@ -21,6 +49,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .topbar h1 {
@@ -47,7 +79,7 @@
       color: #f39c12;
     }
 
-    /* Main content with 1 inch margin left and right */
+    /* Main content */
     .main-content {
       margin: 0 1in;
       padding: 30px 0;
@@ -77,9 +109,67 @@
       line-height: 1.6;
     }
 
+    .company-duration {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+
+    .duration {
+      color: #666;
+      font-style: italic;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Georgia, serif;
+    }
+
+    table td {
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    table td:first-child {
+      font-weight: bold;
+    }
+
+    footer {
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+      font-size: 14px;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .company-duration {
+        flex-direction: column;
+      }
+
+      .hero-text {
+        font-size: 18px;
+      }
+
+      .main-content {
+        margin: 0 20px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
+  <!-- Hero Photo Banner -->
+  <div class="hero-photo">
+    <img src="ocean-banner.jpg" alt="Profile Photo">
+    <div class="hero-text">
+      "Whatever the mind of man can conceive and believe, it can achieve" <br> — Napoleon Hill
+    </div>
+  </div>
 
   <!-- Topbar -->
   <div class="topbar">
