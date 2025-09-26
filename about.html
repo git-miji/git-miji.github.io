@@ -41,6 +41,16 @@
       width: 90%;
     }
 
+.profile-photo-container img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #111;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    
     /* Topbar */
     .topbar {
       background-color: #111;
@@ -218,8 +228,14 @@ h2 {
 <!--**************************************************************************************************************** -->
   <!-- Main Content -->
   <div class="main-content">
-    <section id="About">
+    <section id="About Me">
       <h2>About Me</h2>
+
+  <!-- Profile Photo below Topbar -->
+  <div class="profile-photo-container">
+    <img src="https://git-miji.github.io/miji.jpg" alt="Md Kausar Hamid Miji">
+  </div>
+
         <div class="experience-item">
           <p>
             I am currently pursuing an M.S. in Electrical Engineering in the Department of Electrical Engineering and Computer Science at the South Dakota School 
