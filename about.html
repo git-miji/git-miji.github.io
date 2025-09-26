@@ -40,7 +40,7 @@
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
       width: 90%;
     }
-    
+
     /* Topbar */
     .topbar {
       background-color: #111;
@@ -80,37 +80,24 @@
     .topbar nav ul li a:hover {
       color: #f39c12;
     }
-    /* Profile Photo below Topbar */
-    .profile-photo-container {
-      text-align: center;
-      margin: 20px 0;
-    }
 
-    .profile-photo-container img {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #111;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    }
-    
     /* Main content */
     .main-content {
       margin: 0 1in;
       padding: 30px 0;
     }
 
-    h2 {
-      font-size: 40px;
-      margin: 30px 0 20px;
-      text-align: center;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
-    }
-
-    
+h2 {
+  font-size: 40px;
+  margin: 30px 0 20px;
+  text-align: center;
+  color: #001F3F;              /* Navy blue-ish */
+  /* text-decoration: underline;  #### Underline text */
+ /* font-style: italic;          ### Italic */
+ /*  font-family: "Brush Script MT", cursive, "Comic Sans MS", serif; ###### Curly/cursive style */
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
 
     .experience-item {
       background: #fff;
@@ -140,7 +127,18 @@
       color: #666;
       font-style: italic;
     }
+/*Adding Bullet Point for Job Roles*/
+.roles-list {
+  list-style-type: square;  /* square bullets */
+  margin-left: 20px;        /* indentation */
+  padding-left: 15px;
+}
 
+.roles-list li {
+  margin-bottom: 8px;       /* spacing between points */
+  line-height: 1.6;         /* better readability */
+}
+    
     table {
       width: 100%;
       border-collapse: collapse;
@@ -181,17 +179,17 @@
 
   <!-- Hero Photo Banner -->
   <div class="hero-photo">
-    <img src="ocean-banner.jpg" alt="Profile Photo">
+    <img src="ocean-banner.jpg" alt="Banner">
     <div class="hero-text">
       "Whatever the mind of man can conceive and believe, it can achieve" <br> — Napoleon Hill
     </div>
   </div>
 
-  <!-- Topbar -->
+ <!-- Topbar -->
   <div class="topbar">
-    <h1 class="centered-heading">Md Kausar Hamid Miji</h1>
+    <h1>Md Kausar Hamid Miji</h1>
     <nav>
-      <ul>
+      <ul class="job-roles">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="Work_Experience.html">Work Experience</a></li>
