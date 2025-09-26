@@ -190,31 +190,27 @@ h2 {
 
 /* Core Competencies Section */
 /* Global box-sizing for easier width management */
-* {
-  box-sizing: border-box;
-}
-
-/* Core Competency Section */
-#CoreCompetency {
+/* Core Competencies Section */
+#Core\ Competencies {
   text-align: center;
   margin-top: 40px;
 }
 
-#CoreCompetency h2 {
+#Core\ Competencies h2 {
   font-size: 32px;
   color: navy;
   text-decoration: underline;
   font-style: italic;
-  font-family: "Brush Script MT", cursive, sans-serif;
+  font-family: "Cursive", sans-serif;
   margin-bottom: 25px;
 }
 
 /* Competency Grid Layout */
 .competency-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Flexible columns */
   gap: 20px;
-  justify-items: center;
+  justify-items: center; /* Center each box */
   margin-top: 20px;
   width: 100%;
 }
@@ -222,18 +218,18 @@ h2 {
 /* Competency Box */
 .competency-box {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  flex-direction: column;
   width: 100%;
-  max-width: 320px;
-  min-height: 200px;
+  max-width: 320px;   /* Max width for large screens */
+  min-height: 200px;  /* Ensures it grows with text */
   padding: 15px;
   border: 2px solid navy;
   border-radius: 12px;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
   font-style: italic;
-  font-family: "Brush Script MT", cursive, sans-serif;
+  font-family: "Cursive", sans-serif;
   background-color: #f9f9f9;
   transition: transform 0.2s ease, background-color 0.3s ease;
   text-align: center;
@@ -244,9 +240,9 @@ h2 {
   background-color: #eef3ff;
 }
 
-/* Competency Circle */
+/* Competency Circle (Flexible) */
 .competency-circle {
-  width: 30%;              /* Responsive relative to box */
+  width: 30%;              /* Scales relative to box */
   aspect-ratio: 1 / 1;     /* Keeps circle round */
   border-radius: 50%;
   margin-bottom: 10px;
@@ -268,13 +264,6 @@ h2 {
   margin: 2px 0;
   font-size: 14px;
   color: #444;
-}
-
-/* Text inside box */
-.competency-box span {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
 }
 
 /* 🔹 Utility Classes for Box Colors */
