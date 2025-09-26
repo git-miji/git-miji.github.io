@@ -32,9 +32,7 @@
       left: 50%;
       transform: translateX(-50%);
       color: white;
-      font-size: 32px;
-      color: #FFD700
-      /* dark blue color: #003366; sand color: #C2B280; sandy brown   color: #F4A460; */      
+      font-size: 24px;
       font-weight: bold;
       text-align: center;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
@@ -87,12 +85,17 @@
       padding: 30px 0;
     }
 
-    h2 {
-      font-size: 28px;
-      margin: 30px 0 20px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-    }
+h2 {
+  font-size: 40px;
+  margin: 30px 0 20px;
+  text-align: center;
+  color: #001F3F;              /* Navy blue-ish */
+  /* text-decoration: underline;  #### Underline text */
+ /* font-style: italic;          ### Italic */
+ /*  font-family: "Brush Script MT", cursive, "Comic Sans MS", serif; ###### Curly/cursive style */
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
 
     .experience-item {
       background: #fff;
@@ -163,10 +166,6 @@
         flex-direction: column;
       }
 
-      .hero-text {
-        font-size: 18px;
-      }
-
       .main-content {
         margin: 0 20px;
       }
@@ -178,17 +177,17 @@
 
   <!-- Hero Photo Banner -->
   <div class="hero-photo">
-    <img src="ocean-banner.jpg" alt="Profile Photo">
+    <img src="ocean-banner.jpg" alt="Banner">
     <div class="hero-text">
       "Whatever the mind of man can conceive and believe, it can achieve" <br> — Napoleon Hill
     </div>
   </div>
 
-  <!-- Topbar -->
+ <!-- Topbar -->
   <div class="topbar">
     <h1>Md Kausar Hamid Miji</h1>
     <nav>
-      <ul>
+      <ul class="job-roles">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="Work_Experience.html">Experience</a></li>
@@ -198,7 +197,9 @@
       </ul>
     </nav>
   </div>
-<!-- Main content -->
+
+  
+  <!-- Main content -->
 <div class="main-content">
   <section id="Projects">
     <h2>Projects</h2>
