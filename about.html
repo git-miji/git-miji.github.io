@@ -191,12 +191,13 @@ h2 {
 /*Core Competency in Boxed and Grid Style*/
 
 /* Section Title */
-#competency {
+/* Core Competencies Section */
+#core-competency {
   text-align: center;
   margin-top: 40px;
 }
 
-#competency h2 {
+#core-competency h2 {
   font-size: 32px;
   color: navy;
   text-decoration: underline;
@@ -231,7 +232,7 @@ h2 {
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-.competency-item:hover {
+.competency-box:hover {
   transform: scale(1.05);
   background-color: #eef3ff; /* Hover effect */
 }
@@ -248,11 +249,27 @@ h2 {
 }
 
 /* Text inside box */
-.competency-item span {
+.competency-box span {
   font-size: 14px;
   font-weight: bold;
   color: #333;
-}    
+}
+
+/* 🔹 Utility Classes for Colors */
+
+/* Box Colors */
+.box-blue { background-color: #dbeafe; }   /* light blue */
+.box-green { background-color: #dcfce7; }  /* light green */
+.box-yellow { background-color: #fef9c3; } /* light yellow */
+.box-red { background-color: #fee2e2; }    /* light red */
+.box-purple { background-color: #ede9fe; } /* light purple */
+
+/* Circle Colors */
+.circle-blue { background-color: #3b82f6; }   /* blue */
+.circle-green { background-color: #22c55e; }  /* green */
+.circle-yellow { background-color: #eab308; } /* yellow */
+.circle-red { background-color: #ef4444; }    /* red */
+.circle-purple { background-color: #a855f7; } /* purple */
   </style>
 </head>
 
@@ -318,7 +335,7 @@ h2 {
 <!--**************************************************************************************************************** -->
 <!--Core Competencies Section -->
 <!--**************************************************************************************************************** -->
-<section id="Core Competencies">
+<section id="core-competency">
   <h2>CORE COMPETENCIES & KNOWLEDGE</h2>
   <div class="competency-grid">
 
@@ -354,7 +371,7 @@ h2 {
       <div class="competency-title">NETWORKING & INFRASTRUCTURES</div>
       <div class="competency-content">
         <p>OSPF, BGP, EIGRP</p>
-        <p> VLAN</p>
+        <p>VLAN</p>
         <p>VPN, DNS, DHCP</p>
         <p>Routing, Switching</p>
         <p>Aruba Networks</p>
@@ -364,7 +381,6 @@ h2 {
       </div>
     </div>
 
-        </tr>
     <!-- Box 4 -->
     <div class="competency-box">
       <div class="competency-title">TELECOMMUNICATION TECHNOLOGIES</div>
@@ -373,9 +389,9 @@ h2 {
         <p>ODN Design</p>
         <p>Capacity Planning</p>
         <p>FTTH Topology Selection</p>
-        <p>Passive Optical network (PON),</p>
+        <p>Passive Optical Network (PON)</p>
         <p>Route Optimization</p>
-        <p>VMwareFiber Backbone Architectue</p>
+        <p>VMware, Fiber Backbone Architecture</p>
         <p>Technical Standards Compliance</p>
         <p>Fiber Pathway Analysis</p>       
       </div>
@@ -383,7 +399,7 @@ h2 {
     
     <!-- Box 5 -->
     <div class="competency-box">
-      <div class="competency-title">PROGRAMMING LANGUATE</div>
+      <div class="competency-title">PROGRAMMING LANGUAGES</div>
       <div class="competency-content">
         <p>Python</p>
         <p>C++</p>
@@ -403,7 +419,7 @@ h2 {
         <p>Active Directory</p>
         <p>Wireshark</p>
         <p>AutoCAD</p>
-        <p>Power Bi</p>
+        <p>Power BI</p>
         <p>Power Automate</p>
         <p>Power Apps</p>
         <p>Visio</p>
@@ -411,9 +427,10 @@ h2 {
         <p>Excel</p>
       </div>
     </div>
+
   </div>
 </section>
-      
+
 <!--**************************************************************************************************************** -->
 <!--Training & Certificate Section -->
 <!--**************************************************************************************************************** -->
