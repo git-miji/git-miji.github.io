@@ -144,6 +144,24 @@
       margin-top: 40px;
     }
 
+/*Add CSS for responsiveness of Video Frame*/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 25px;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; /* optional rounded corners */
+}
+
+    
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .company-duration {
@@ -191,13 +209,25 @@
   <section id="Projects">
     <h2>Projects</h2>
 
-    <div class="experience-item">
-      <strong>Kerberos Protocol</strong>
+<div class="experience-item">
+<strong>Kerberos Protocol</strong>
       <p>Delivered an in-depth analysis of the Kerberos Protocol suite, outlining its critical functions in enhancing 
-        network security and ensuring secure authentication within computer networks 
-        <a href="https://www.youtube.com/watch?v=tn3_QMKewK8&t=4s">(Demo Link)</a>.
+        network security and ensuring secure authentication within computer networks.
       </p>
-    </div>
+
+  <!-- Video Frame -->
+  <div class="video-container">
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/tn3_QMKewK8?start=4" 
+      title="Kerberos Protocol Demo" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
 
     <div class="experience-item">
       <strong>Vulnerable and Outdated Components</strong>
