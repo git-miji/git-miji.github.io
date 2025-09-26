@@ -32,7 +32,9 @@
       left: 50%;
       transform: translateX(-50%);
       color: white;
-      font-size: 24px;
+      font-size: 32px;
+      color: #FFD700
+      /* dark blue color: #003366; sand color: #C2B280; sandy brown   color: #F4A460; */      
       font-weight: bold;
       text-align: center;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
@@ -120,7 +122,18 @@
       color: #666;
       font-style: italic;
     }
+/*Adding Bullet Point for Job Roles*/
+.roles-list {
+  list-style-type: square;  /* square bullets */
+  margin-left: 20px;        /* indentation */
+  padding-left: 15px;
+}
 
+.roles-list li {
+  margin-bottom: 8px;       /* spacing between points */
+  line-height: 1.6;         /* better readability */
+}
+    
     table {
       width: 100%;
       border-collapse: collapse;
@@ -192,7 +205,7 @@
 <!--Leadership & Activity Section -->
 <!--**************************************************************************************************************** -->
     
-    <section id = "Leadership & Activities">
+    <section id = "Leadership & Awards">
             <h2>Leadership & Activities</h2>
   <div class="experience-item">
     <p>
@@ -227,6 +240,22 @@
         </div>
     </p>
     </div>
+
+  <div class="experience-item">
+        <h3>Assistant Engineer</h3>
+        <div class="company-duration">
+            <strong>DigiCon Telecommunications Company Limited</strong>
+            <span class="duration">Jan 2014 - Dec 2014</span>
+        </div>
+        
+        <h4 class="roles-heading">Major Roles:</h4>
+        <ul class="roles-list">
+          <li>Troubleshooted customer complaints, efficiently resolved issues, escalated or rerouted as necessary, ensuring 100% SLA compliance.</li>
+          <li>Obtained 90% uptime by inspecting System KPIs, QoS, Upstream and Downstream capacity, Traffic, Transmission Level Network alarms 
+            (including IPLC, ITC, IP BW, ICX), signaling Links, and Card Status of the Soft-switch (Genview C3).</li>
+        </ul>
+    </div>
+      
     </section>
 </div>
 
