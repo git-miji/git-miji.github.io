@@ -125,7 +125,18 @@ h2 {
       color: #666;
       font-style: italic;
     }
+/*Adding Bullet Point for Job Roles*/
+.roles-list {
+  list-style-type: square;  /* square bullets */
+  margin-left: 20px;        /* indentation */
+  padding-left: 15px;
+}
 
+.roles-list li {
+  margin-bottom: 8px;       /* spacing between points */
+  line-height: 1.6;         /* better readability */
+}
+    
     table {
       width: 100%;
       border-collapse: collapse;
@@ -155,10 +166,6 @@ h2 {
         flex-direction: column;
       }
 
-      .hero-text {
-        font-size: 18px;
-      }
-
       .main-content {
         margin: 0 20px;
       }
@@ -170,7 +177,7 @@ h2 {
 
   <!-- Hero Photo Banner -->
   <div class="hero-photo">
-    <img src="ocean-banner.jpg" alt="Profile Photo">
+    <img src="ocean-banner.jpg" alt="Banner">
     <div class="hero-text">
       "Whatever the mind of man can conceive and believe, it can achieve" <br> — Napoleon Hill
     </div>
@@ -180,7 +187,7 @@ h2 {
   <div class="topbar">
     <h1>Md Kausar Hamid Miji</h1>
     <nav>
-      <ul>
+      <ul class="job-roles">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="Work_Experience.html">Experience</a></li>
@@ -190,7 +197,6 @@ h2 {
       </ul>
     </nav>
   </div>
-
   
 <!--**************************************************************************************************************** -->
 <!--Contact Section -->
