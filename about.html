@@ -189,26 +189,32 @@ h2 {
     }
 
 /* Core Competencies Section */
-#Core\ Competencies {
+/* Global box-sizing for easier width management */
+* {
+  box-sizing: border-box;
+}
+
+/* Core Competency Section */
+#CoreCompetency {
   text-align: center;
   margin-top: 40px;
 }
 
-#Core\ Competencies h2 {
+#CoreCompetency h2 {
   font-size: 32px;
   color: navy;
   text-decoration: underline;
   font-style: italic;
-  font-family: "Cursive", sans-serif;
+  font-family: "Brush Script MT", cursive, sans-serif;
   margin-bottom: 25px;
 }
 
 /* Competency Grid Layout */
 .competency-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Flexible columns */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  justify-items: center; /* Center each box */
+  justify-items: center;
   margin-top: 20px;
   width: 100%;
 }
@@ -216,18 +222,18 @@ h2 {
 /* Competency Box */
 .competency-box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex-direction: column;
   width: 100%;
-  max-width: 320px;   /* Max width for large screens */
-  min-height: 200px;  /* Ensures it grows with text */
+  max-width: 320px;
+  min-height: 200px;
   padding: 15px;
   border: 2px solid navy;
   border-radius: 12px;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
   font-style: italic;
-  font-family: "Cursive", sans-serif;
+  font-family: "Brush Script MT", cursive, sans-serif;
   background-color: #f9f9f9;
   transition: transform 0.2s ease, background-color 0.3s ease;
   text-align: center;
@@ -238,9 +244,9 @@ h2 {
   background-color: #eef3ff;
 }
 
-/* Competency Circle (Flexible) */
+/* Competency Circle */
 .competency-circle {
-  width: 30%;              /* Scales relative to box */
+  width: 30%;              /* Responsive relative to box */
   aspect-ratio: 1 / 1;     /* Keeps circle round */
   border-radius: 50%;
   margin-bottom: 10px;
@@ -271,21 +277,20 @@ h2 {
   color: #333;
 }
 
-/* 🔹 Utility Classes for Colors */
-
-/* Box Colors */
+/* 🔹 Utility Classes for Box Colors */
 .box-blue { background-color: #dbeafe; }   /* light blue */
 .box-green { background-color: #dcfce7; }  /* light green */
 .box-yellow { background-color: #fef9c3; } /* light yellow */
 .box-red { background-color: #fee2e2; }    /* light red */
 .box-purple { background-color: #ede9fe; } /* light purple */
 
-/* Circle Colors */
+/* 🔹 Utility Classes for Circle Colors */
 .circle-blue { background-color: #3b82f6; }   /* blue */
 .circle-green { background-color: #22c55e; }  /* green */
 .circle-yellow { background-color: #eab308; } /* yellow */
 .circle-red { background-color: #ef4444; }    /* red */
 .circle-purple { background-color: #a855f7; } /* purple */
+
   </style>
 </head>
 
@@ -351,12 +356,13 @@ h2 {
 <!--**************************************************************************************************************** -->
 <!--Core Competencies Section -->
 <!--**************************************************************************************************************** -->
-<section id="core-competency">
+<section id="CoreCompetency">
   <h2>CORE COMPETENCIES & KNOWLEDGE</h2>
   <div class="competency-grid">
 
     <!-- Box 1 -->
-    <div class="competency-box">
+    <div class="competency-box box-blue">
+      <div class="competency-circle circle-blue"></div>
       <div class="competency-title">LEADERSHIP</div>
       <div class="competency-content">
         <p>Team Coordination</p>
@@ -370,7 +376,8 @@ h2 {
     </div>
 
     <!-- Box 2 -->
-    <div class="competency-box">
+    <div class="competency-box box-green">
+      <div class="competency-circle circle-green"></div>
       <div class="competency-title">SECURITY ARCHITECTURE & COMPLIANCE</div>
       <div class="competency-content">
         <p>IAM, RBAC, AAA</p>
@@ -383,7 +390,8 @@ h2 {
     </div>
 
     <!-- Box 3 -->
-    <div class="competency-box">
+    <div class="competency-box box-yellow">
+      <div class="competency-circle circle-yellow"></div>
       <div class="competency-title">NETWORKING & INFRASTRUCTURES</div>
       <div class="competency-content">
         <p>OSPF, BGP, EIGRP</p>
@@ -398,7 +406,8 @@ h2 {
     </div>
 
     <!-- Box 4 -->
-    <div class="competency-box">
+    <div class="competency-box box-red">
+      <div class="competency-circle circle-red"></div>
       <div class="competency-title">TELECOMMUNICATION TECHNOLOGIES</div>
       <div class="competency-content">
         <p>Optical Network Planning & Design</p>
@@ -407,14 +416,15 @@ h2 {
         <p>FTTH Topology Selection</p>
         <p>Passive Optical Network (PON)</p>
         <p>Route Optimization</p>
-        <p>VMware, Fiber Backbone Architecture</p>
+        <p>VMware Fiber Backbone Architecture</p>
         <p>Technical Standards Compliance</p>
         <p>Fiber Pathway Analysis</p>       
       </div>
     </div>
     
     <!-- Box 5 -->
-    <div class="competency-box">
+    <div class="competency-box box-purple">
+      <div class="competency-circle circle-purple"></div>
       <div class="competency-title">PROGRAMMING LANGUAGES</div>
       <div class="competency-content">
         <p>Python</p>
@@ -427,7 +437,8 @@ h2 {
     </div>
 
     <!-- Box 6 -->
-    <div class="competency-box">
+    <div class="competency-box box-blue">
+      <div class="competency-circle circle-blue"></div>
       <div class="competency-title">TOOLS & SOFTWARE</div>
       <div class="competency-content">
         <p>Anaconda</p>
@@ -446,6 +457,7 @@ h2 {
 
   </div>
 </section>
+
 
 <!--**************************************************************************************************************** -->
 <!--Training & Certificate Section -->
