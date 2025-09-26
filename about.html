@@ -188,16 +188,13 @@ h2 {
       }
     }
 
-/*Core Competency in Boxed and Grid Style*/
-
-/* Section Title */
 /* Core Competencies Section */
-#core-competency {
+#Core\ Competencies {
   text-align: center;
   margin-top: 40px;
 }
 
-#core-competency h2 {
+#Core\ Competencies h2 {
   font-size: 32px;
   color: navy;
   text-decoration: underline;
@@ -208,44 +205,63 @@ h2 {
 
 /* Competency Grid Layout */
 .competency-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the boxes */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Flexible columns */
   gap: 20px;
+  justify-items: center; /* Center each box */
   margin-top: 20px;
+  width: 100%;
 }
 
 /* Competency Box */
 .competency-box {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  max-width: 320px;   /* Max width for large screens */
+  min-height: 200px;  /* Ensures it grows with text */
+  padding: 15px;
   border: 2px solid navy;
   border-radius: 12px;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
   font-style: italic;
   font-family: "Cursive", sans-serif;
-  background-color: #f9f9f9; /* Default box color */
+  background-color: #f9f9f9;
   transition: transform 0.2s ease, background-color 0.3s ease;
+  text-align: center;
 }
 
 .competency-box:hover {
   transform: scale(1.05);
-  background-color: #eef3ff; /* Hover effect */
+  background-color: #eef3ff;
 }
 
-/* Competency Circle */
+/* Competency Circle (Flexible) */
 .competency-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%; /* Makes it circular */
+  width: 30%;              /* Scales relative to box */
+  aspect-ratio: 1 / 1;     /* Keeps circle round */
+  border-radius: 50%;
   margin-bottom: 10px;
-  border: 2px solid #000;
-  background-color: #ccc; /* Default circle color */
+  border: 2px solid navy;
+  background-color: #ccc;  /* Default */
   transition: background-color 0.3s ease;
+}
+
+/* Competency Title */
+.competency-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Competency Content */
+.competency-content p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #444;
 }
 
 /* Text inside box */
