@@ -206,7 +206,7 @@ h2 {
 /* Competency Grid Layout */
 .competency-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 boxes per row */
+  grid-template-columns: repeat(3, 1fr); /* 4 boxes per row */
   /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); ### Flexible columns */
   gap: 20px;
   justify-content: center;  /* centers leftover boxes in last row */
@@ -278,18 +278,7 @@ h2 {
 .circle-green { background-color: #22c55e; }  /* green */
 .circle-yellow { background-color: #eab308; } /* yellow */
 .circle-red { background-color: #ef4444; }    /* red */
-.circle-purple { background-color: #a855f7; } /* purple */
-
-/*Container for Centering the Competency Boxes*/
-.centered-container {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-  width: 100%;             /* Full width */
-  margin-bottom: 20px;     /* Space between rows */
-}
-
-    
+.circle-purple { background-color: #a855f7; } /* purple */  
   </style>
 </head>
 
@@ -417,7 +406,6 @@ h2 {
       </div>
     </div>
 
-    <div class="centered-container">
     <!-- Box 5 -->
     <div class="competency-box box-purple">
       <div class="competency-title">PROGRAMMING LANGUAGES</div>
@@ -447,7 +435,6 @@ h2 {
         <p>MS Project</p>
         <p>Excel</p>
       </div>
-    </div>
     </div>
   </div>
 </section>
