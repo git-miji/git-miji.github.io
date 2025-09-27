@@ -280,6 +280,16 @@ h2 {
 .circle-red { background-color: #ef4444; }    /* red */
 .circle-purple { background-color: #a855f7; } /* purple */
 
+/*Container for Centering the Competency Boxes*/
+.centered-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  width: 100%;             /* Full width */
+  margin-bottom: 20px;     /* Space between rows */
+}
+
+    
   </style>
 </head>
 
@@ -364,7 +374,7 @@ h2 {
     </div>
 
     <!-- Box 2 -->
-    <div class="competency-circle box-green">
+    <div class="competency-box box-green">
       <div class="competency-title">SECURITY ARCHITECTURE & COMPLIANCE</div>
       <div class="competency-content">
         <p>IAM, RBAC, AAA</p>
@@ -406,7 +416,8 @@ h2 {
         <p>Fiber Pathway Analysis</p>       
       </div>
     </div>
-    
+
+    <div class="centered-container">
     <!-- Box 5 -->
     <div class="competency-box box-purple">
       <div class="competency-title">PROGRAMMING LANGUAGES</div>
@@ -437,7 +448,7 @@ h2 {
         <p>Excel</p>
       </div>
     </div>
-
+    </div>
   </div>
 </section>
 
