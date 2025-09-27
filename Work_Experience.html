@@ -197,6 +197,64 @@ h2 {
 .circle-red { background-color: #ef4444; }    /* red */
 .circle-purple { background-color: #a855f7; } /* purple */  
 
+/*Work Experience*/
+
+.work-experience {
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.photo-container {
+  flex: 0 0 150px; /* fixed width for photo */
+  height: 150px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.photo-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.details {
+  flex: 1;
+}
+
+.details .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details .position {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.details .duration {
+  font-style: italic;
+  color: #555;
+}
+
+.details .organization {
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+.details .achievements {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
     
   </style>
 </head>
@@ -235,7 +293,25 @@ h2 {
 
     <!-- Add more experience items as needed -->
 
-  <div class="experience-item box-green">
+<div class="work-experience">
+  <div class="photo-container">
+    <img src="BTCL.svg" alt="Organization Logo or Photo">
+  </div>
+  <div class="details">
+    <div class="header">
+      <h3 class="position">Position Title</h3>
+      <span class="duration">Jan 2023 – Dec 2024</span>
+    </div>
+    <p class="organization">Organization Name</p>
+    <p class="achievements">
+      <strong>Achievements:</strong> 
+      Improved workflow efficiency by 20% through automation and led a team of 5 engineers on key projects.
+    </p>
+  </div>
+</div>
+
+        
+  <div class="experience-item box-green"> 
         <h3>Graduate Assistant</h3>
         <div class="company-duration">
             <strong>South Dakota School of Mines and Technology</strong>
