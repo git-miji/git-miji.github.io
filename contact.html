@@ -110,80 +110,99 @@
     }
 
     /* Contact Form Styles */
-    .contact-form {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      margin: 30px auto;
-    }
+   /* Two-column layout */
+.contact-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-    .contact-form h3 {
-      margin-bottom: 20px;
-      font-size: 24px;
-      text-align: center;
-      color: #001F3F;
-    }
+.contact-info-box {
+  flex: 1;
+  min-width: 250px;
+  font-size: 16px;
+}
 
-    .form-group {
-      margin-bottom: 15px;
-    }
+.contact-form-box {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: bold;
-      color: #333;
-    }
+.contact-form-box h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-align: center;
+  color: #001F3F;
+}
 
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-      transition: border-color 0.3s ease;
-    }
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
 
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: #007bff;
-      outline: none;
-    }
+.social-icons a {
+  color: #333;
+  transition: color 0.3s;
+}
 
-    textarea {
-      resize: vertical;
-      height: 120px;
-    }
+.social-icons a:hover {
+  color: #007bff;
+}
 
-    .btn-submit {
-      width: 100%;
-      background: #007bff;
-      color: #fff;
-      border: none;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+/* Form elements */
+.form-group {
+  margin-bottom: 15px;
+}
 
-    .btn-submit:hover {
-      background: #0056b3;
-    }
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
 
-    .required {
-      color: red;
-    }
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .main-content {
-        margin: 0 20px;
-      }
-    }
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.btn-submit {
+  width: 100%;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #0056b3;
+}
+
+/* Responsive: Stack columns on small screens */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
   </style>
 </head>
 
@@ -219,46 +238,55 @@
 <div class="main-content">
   <section id="Contact">
       <h2>CONTACT</h2>
-      <div class="experience-item">    
-        <p><i class="fas fa-user"></i> Md Kausar Hamid Miji</p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:md.miji@mines.sdsmt.edu">md.miji@mines.sdsmt.edu</a></p>
-        <p><i class="fas fa-map-marker-alt"></i> Rapid City, SD, USA - 57701</p>
-        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/md-miji/" target="_blank">LinkedIn</a></p>
 
-      <!-- Contact Form -->
-      <div class="contact-form">
-        <h3>Send Me a Message</h3>
-        <form action="https://formspree.io/f/your_form_id" method="POST">
-          <div class="form-group">
-            <label for="name">Name <span class="required">*</span></label>
-            <input type="text" id="name" name="name" required>
+      <div class="contact-container">
+        <!-- Left Column: Contact Info -->
+        <div class="contact-info-box">
+          <p><strong>Address:</strong> 501 E Saint Joseph St.</p>
+          <p><strong>Email:</strong> <a href="mailto:md.miji@mines.sdsmt.edu">md.miji@mines.sdsmt.edu</a></p>
+
+          <!-- Social Media Logos -->
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/md-miji/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-x-twitter fa-2x"></i></a>
           </div>
+        </div>
 
-          <div class="form-group">
-            <label for="email">Email <span class="required">*</span></label>
-            <input type="email" id="email" name="_replyto" required>
-          </div>
+        <!-- Right Column: Contact Form -->
+        <div class="contact-form-box">
+          <h3>Send me a message</h3>
+          <form action="https://formspree.io/f/your_form_id" method="POST">
+            <div class="form-group">
+              <label for="name">Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required>
+            </div>
 
-          <div class="form-group">
-            <label for="subject">Subject <span class="required">*</span></label>
-            <input type="text" id="subject" name="subject" required>
-          </div>
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="_replyto" required>
+            </div>
 
-          <div class="form-group">
-            <label for="message">Message <span class="required">*</span></label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
+            <div class="form-group">
+              <label for="subject">Subject <span class="required">*</span></label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
 
-          <button type="submit" class="btn-submit">Send Message</button>
-        </form>
+            <div class="form-group">
+              <label for="message">Message <span class="required">*</span></label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
       </div>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2025 Md Kausar Hamid Miji. All rights reserved. Banner Image Source: Internet.</p>
+      </footer>
   </section>
-        
-        <!-- Footer -->
-        <footer>
-          <p>&copy; 2025 Md Kausar Hamid Miji. All rights reserved. Banner Image Source: Internet.</p>
-        </footer>
-      </div>
 </div>
 
 </body>
