@@ -131,7 +131,9 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       margin-bottom: 20px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
     }
 
     .core-values-grid {
@@ -154,7 +156,7 @@
     .core-value i {
       font-size: 40px;
       margin-bottom: 10px;
-      color: #1abc9c; /* Turquoise for all core values */
+      color: #1abc9c; /* Turquoise for icons */
       transition: transform 0.3s ease;
     }
 
@@ -226,7 +228,7 @@
   <!-- Main content -->
   <div class="main-content">
     <!-- Profile Summary -->
-    <section id="Profile Summary">
+    <section id="ProfileSummary">
       <h2>PROFILE SUMMARY</h2>
       <div class="experience-item">   
         <p>
@@ -242,20 +244,22 @@
     <!-- Core Values -->
     <section id="CoreValues">
       <h2>CORE VALUES</h2>
+      <div class="core-values">
         <!-- First Grid -->
         <div class="core-values-grid">
-          <div class="core-value"><i class="fas fa-handshake honesty"></i><span>Honesty</span></div>
-          <div class="core-value"><i class="fas fa-home family"></i><span>Family</span></div>
-          <div class="core-value"><i class="fas fa-gavel integrity"></i><span>Integrity</span></div>
-          <div class="core-value"><i class="fas fa-heart respect"></i><span>Respect</span></div>
+          <div class="core-value"><i class="fas fa-handshake"></i><span>Honesty</span></div>
+          <div class="core-value"><i class="fas fa-home"></i><span>Family</span></div>
+          <div class="core-value"><i class="fas fa-gavel"></i><span>Integrity</span></div>
+          <div class="core-value"><i class="fas fa-heart"></i><span>Respect</span></div>
         </div>
 
         <!-- Second Grid -->
         <div class="core-values-grid">
-          <div class="core-value"><i class="fas fa-smile gratitude"></i><span>Gratitude</span></div>
-          <div class="core-value"><i class="fas fa-spa wellbeing"></i><span>Well-being</span></div>
-          <div class="core-value"><i class="fas fa-user-check selfrespect"></i><span>Self-respect</span></div>
-          <div class="core-value"><i class="fas fa-seedling personalgrowth"></i><span>Personal-growth</span></div>   
+          <div class="core-value"><i class="fas fa-smile"></i><span>Gratitude</span></div>
+          <div class="core-value"><i class="fas fa-leaf"></i><span>Well-being</span></div>
+          <div class="core-value"><i class="fas fa-user-check"></i><span>Self-respect</span></div>
+          <div class="core-value"><i class="fas fa-seedling"></i><span>Personal-growth</span></div>
+        </div>
       </div>
     </section>
 
