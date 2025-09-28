@@ -78,11 +78,19 @@
       color: #f39c12;
     }
 
-    /* Intro text above container */
+    /* Section Heading (like Work Experience) */
+    h2 {
+      font-size: 40px;
+      margin: 30px 0 20px;
+      text-align: center;
+      color: #001F3F;
+    }
+
+    /* Intro Text Above Columns */
     .intro-text {
       text-align: center;
       font-size: 16px;
-      margin: 30px 1in 10px;
+      margin: 20px 1in 20px;
     }
 
     /* Contact Section Container */
@@ -166,7 +174,7 @@
 
     textarea {
       resize: vertical;
-      margin-bottom: 20px; /* separation from send button */
+      margin-bottom: 20px;
     }
 
     button[type="submit"] {
@@ -218,7 +226,9 @@
       font-size: 14px;
       color: #777;
       margin-top: 40px;
+      text-align: center;
     }
+
     @media(max-width: 768px) {
       .contact-columns {
         flex-direction: column;
@@ -261,77 +271,77 @@
     </nav>
   </div>
 
-  <!-- Intro Text -->
+  <!-- Contact Section -->
+  <div class="main-content">
+    <h2>CONTACT</h2>
+    <div class="contact-container">
+      <p class="intro-text">
+        Please feel free to reach out using the contact information below, or send a message directly through the form.
+      </p>
 
-  <div class="main-content" id="Contact">
-    <h2>Contact</h2>
-  <!-- Contact Section Container -->
-  <div class="contact-container">
-  <p class="intro-text">
-    Please feel free to reach out using the contact information below, or send a message directly through the form.
-  </p>
-    <div class="contact-columns">
+      <div class="contact-columns">
 
-    <!-- Left Column: Contact Info (Centered) -->
-    <div class="contact-left" style="flex:1; min-width:280px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
-      <div class="contact-info">
-        <div class="contact-row">
-          <span class="label"><strong>Address:</strong></span>
-          <span class="value">
-            Care of: Beth Riley, Director<br>
-            Ivanhoe International Center<br>
-            501 E. Saint Joseph St.<br>
-            Rapid City, SD 57701<br>
-            Email: md.miji@mines.sdsmt.edu
-          </span>
+        <!-- Left Column: Contact Info -->
+        <div class="contact-left">
+          <div class="contact-info">
+            <div class="contact-row">
+              <span class="label"><strong>Address:</strong></span>
+              <span class="value">
+                Care of: Beth Riley, Director<br>
+                Ivanhoe International Center<br>
+                501 E. Saint Joseph St.<br>
+                Rapid City, SD 57701<br>
+                Email: md.miji@mines.sdsmt.edu
+              </span>
+            </div>
+          </div>
         </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="contact-right">
+          <p>Fill out the form below to send me a message directly.</p>
+
+          <form id="contactForm" action="https://formspree.io/f/xqaqyzdp" method="POST" novalidate>
+            <p class="required-note">Fields marked <span style="color:red;">*</span> are required.</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name <span style="color:red;">*</span></label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span style="color:red;">*</span></label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span style="color:red;">*</span></label>
+                <input type="email" id="email" name="email" required>
+                <small id="emailError" style="color:red; display:none;">Please enter a valid email address.</small>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone <span style="color:red;">*</span></label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject <span style="color:red;">*</span></label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span style="color:red;">*</span></label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
       </div>
-    </div>
-
-      <!-- Right Column: Contact Form -->
-      <div class="contact-right">
-        <p>Fill out the form below to send me a message directly.</p>
-
-        <form id="contactForm" action="https://formspree.io/f/xqaqyzdp" method="POST" novalidate>
-          <p class="required-note">Fields marked <span style="color:red;">*</span> are required.</p>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First Name <span style="color:red;">*</span></label>
-              <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name <span style="color:red;">*</span></label>
-              <input type="text" id="lastName" name="lastName" required>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email <span style="color:red;">*</span></label>
-              <input type="email" id="email" name="email" required>
-              <small id="emailError" style="color:red; display:none;">Please enter a valid email address.</small>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone <span style="color:red;">*</span></label>
-              <input type="tel" id="phone" name="phone" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="subject">Subject <span style="color:red;">*</span></label>
-            <input type="text" id="subject" name="subject" required>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message <span style="color:red;">*</span></label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-
     </div>
   </div>
 
