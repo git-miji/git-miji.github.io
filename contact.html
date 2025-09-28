@@ -167,6 +167,27 @@
       text-align: center;
     }
 
+  /* Contact info formatting */
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      margin: 6px 0;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .contact-row .label {
+      width: 90px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .contact-row .value {
+      flex: 1;
+    }
+
+
+    
     @media(max-width: 768px) {
       .form-row {
         flex-direction: column;
@@ -209,45 +230,68 @@
     </nav>
   </div>
 
-  <!-- Contact Form Section -->
-  <div class="main-content" id="Contact">
-    <h2>Contact Me</h2>
-    <p>Please feel free to reach out using the contact information below, or send a message directly through the form.</p>
-    <p class="required-note">Fields marked with <span class="required">*</span> are required.</p>
+<!-- Contact Form Section -->
+<div class="main-content" id="Contact">
+  <h2>Contact Me</h2>
+  <div class="experience-item">
+    <p class="required-note">
+      Please feel free to reach out using the contact information below, or send a message directly through the form.<br>
+      Fields marked with <span style="color:#e63946;">*</span> are required.
+    </p>
 
-    <form id="contactForm" action="https://formspree.io/f/xqaqyzdp" method="POST" novalidate>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="firstName">First Name <span class="required">*</span></label>
-          <input type="text" id="firstName" name="firstName" placeholder="Type your first name" required>
-        </div>
-        <div class="form-group">
-          <label for="lastName">Last Name <span class="required">*</span></label>
-          <input type="text" id="lastName" name="lastName" placeholder="Type your last name" required>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="email">Email Address <span class="required">*</span></label>
-          <input type="email" id="email" name="email" placeholder="Type your email" required>
-          <small id="emailError" style="color:red; display:none;">Please enter a valid email address.</small>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number <span class="required">*</span></label>
-          <input type="tel" id="phone" name="phone" placeholder="Type your phone number" required>
+    <div class="contact-container" style="display:flex; flex-wrap:wrap; gap:40px;">
+      <!-- Left Column: Contact Info -->
+      <div class="contact-left" style="flex:1; min-width:280px;">
+        <div class="contact-info">
+          <div class="contact-row">
+            <span class="label"><strong>Address:</strong></span>
+            <span class="value">
+              501 E. Saint Joseph St.<br>
+              Rapid City, SD 57701<br>
+              (605) 653-2893<br>
+              800-544-8162 (toll free)
+            </span>
+          </div>
         </div>
       </div>
 
-      <div class="form-group">
-        <label for="message">Message <span class="required">*</span></label>
-        <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
-      </div>
+      <!-- Right Column: Contact Form -->
+      <div class="contact-right" style="flex:2; min-width:300px;">
+        <form id="contactForm" action="https://formspree.io/f/xqaqyzdp" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name <span style="color:#e63946;">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="Type your first name" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name <span style="color:#e63946;">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="Type your last name" required>
+            </div>
+          </div>
 
-      <button type="submit">Send Message</button>
-    </form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address <span style="color:#e63946;">*</span></label>
+              <input type="email" id="email" name="email" placeholder="Type your email" required>
+              <small id="emailError" style="color:red; display:none;">Please enter a valid email address.</small>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span style="color:#e63946;">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="Type your phone number" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span style="color:#e63946;">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
   </div>
+</div>
 
   <footer>
     <p>&copy; 2025 Md Kausar Hamid Miji. All rights reserved. Banner Image Source: Internet.</p>
