@@ -231,6 +231,26 @@ textarea {
     justify-content: center;
   }
 }
+
+   /* Contact info formatting */
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      margin: 6px 0;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .contact-row .label {
+      width: 90px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .contact-row .value {
+      flex: 1;
+    }
+    
   </style>
 </head>
 
@@ -269,12 +289,22 @@ textarea {
 
       <div class="contact-container">
         <!-- Left Column: Contact Info -->
-        <div class="contact-info-box">
-          <div class="contact-info-content">
-            <p><strong>Address:</strong><br> 501 E Saint Joseph St.</p>
-            <p><strong>Email:</strong><br> 
-              <a href="mailto:md.miji@mines.sdsmt.edu">md.miji@mines.sdsmt.edu</a>
-            </p>
+       <div class="contact-info">
+            <div class="contact-row">
+              <span class="label">Address:</span>
+              <span class="value">
+                501 E. Saint Joseph St.<br>
+                Rapid City, SD 57701<br>
+                (605) 653-2893<br>
+                800-544-8162 (toll free)
+              </span>
+            </div>
+            <div class="contact-row">
+              <span class="label">Website:</span>
+              <span class="value">
+                <a href="https://sdsmt.edu/index.html" target="_blank">https://sdsmt.edu/index.html</a>
+              </span>
+            </div>
 
             <!-- Social Media Logos -->
             <div class="social-icons">
