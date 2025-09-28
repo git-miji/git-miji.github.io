@@ -137,6 +137,21 @@
       font-style: italic;
     }
 
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Georgia, serif;
+    }
+
+    table td {
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    table td:first-child {
+      font-weight: bold;
+    }
+
     footer {
       border-top: 1px solid #ccc;
       padding-top: 20px;
@@ -145,129 +160,62 @@
       margin-top: 40px;
     }
 
+    /* Core Values Section */
+    .core-values-container {
+      background: #fff;
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .core-circle {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      border: 3px solid #2c3e50;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .core-circle .segment {
+      flex: 1 1 45%;
+      text-align: center;
+      font-weight: bold;
+      color: #2c3e50;
+      margin: 10px 0;
+    }
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .company-duration {
         flex-direction: column;
       }
+
       .main-content {
         margin: 0 20px;
       }
-    }
 
-    /* Core Values Circle */
-    :root{
-      --size: 420px;
-      --label-distance: 1.15;
-      --ring-gap: 12px;
-    }
-    .values-card{
-      background:#fff;
-      padding:28px;
-      border-radius:12px;
-      box-shadow:0 6px 20px rgba(0,0,0,0.08);
-      max-width:880px;
-      width:100%;
-      margin: 0 auto 40px;
-      text-align:center;
-    }
-    .values-card h2{
-      margin:0 0 16px;
-      font-size:32px;
-      color:#001F3F;
-    }
-    .value-visual {
-      display:flex;
-      justify-content:center;
-      gap:28px;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-    .core-circle{
-      --s: var(--size);
-      width:var(--s);
-      height:var(--s);
-      border-radius:50%;
-      position:relative;
-      display:inline-block;
-      --a1: #0b6e4f;
-      --a2: #ff7f50;
-      --a3: #ffcc00;
-      --a4: #0074d9;
-      --a5: #6a1b9a;
-      --a6: #2e7d32;
-      background:
-        conic-gradient(
-          var(--a1) 0deg 60deg,
-          var(--a2) 60deg 120deg,
-          var(--a3) 120deg 180deg,
-          var(--a4) 180deg 240deg,
-          var(--a5) 240deg 300deg,
-          var(--a6) 300deg 360deg
-        );
-    }
-    .core-circle::after{
-      content:"";
-      position:absolute;
-      inset:calc(var(--ring-gap));
-      border-radius:50%;
-      background: #fff;
-      z-index:2;
-    }
-    .core-center{
-      position:absolute;
-      inset: calc(var(--size) / 2 - 48px) calc(var(--size) / 2 - 48px);
-      z-index:3;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      width:96px;
-      height:96px;
-      border-radius:50%;
-    }
-    .core-center strong{ font-size:13px; color:#001F3F; }
-    .core-center small{ font-size:11px; color:#556; }
-    .labels{
-      position: absolute;
-      inset:0;
-      z-index:4;
-    }
-    .labels .label{
-      position:absolute;
-      left:50%;
-      top:50%;
-      transform-origin: 0 0;
-      width:220px;
-    }
-    .label--1 { transform: rotate(-60deg) translate(calc(var(--size) * var(--label-distance) / 2)); }
-    .label--2 { transform: rotate(0deg)   translate(calc(var(--size) * var(--label-distance) / 2)); }
-    .label--3 { transform: rotate(60deg)  translate(calc(var(--size) * var(--label-distance) / 2)); }
-    .label--4 { transform: rotate(120deg) translate(calc(var(--size) * var(--label-distance) / 2)); }
-    .label--5 { transform: rotate(180deg) translate(calc(var(--size) * var(--label-distance) / 2)); }
-    .label--6 { transform: rotate(240deg) translate(calc(var(--size) * var(--label-distance) / 2)); }
-    .label .text {
-      transform: rotate(calc(-1 * var(--rotate, 0deg)));
-      display:inline-block;
-      background: rgba(255,255,255,0.9);
-      padding:6px 10px;
-      border-radius:6px;
-      font-weight:600;
-      font-size:14px;
-      color:#111;
-      white-space:nowrap;
-    }
-    @media (max-width:900px){
-      :root{ --size:320px; }
-    }
-    @media (max-width:560px){
-      :root{ --size:260px; --label-distance:1.05; }
-      .labels .label { width:140px; }
+      .core-circle {
+        width: 300px;
+        height: 300px;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <!-- Hero Photo Banner -->
   <div class="hero-photo">
     <img src="ocean-banner.jpg" alt="Profile Photo">
@@ -298,6 +246,7 @@
 
   <!-- Main content -->
   <div class="main-content">
+
     <!-- Profile Summary -->
     <section id="Profile Summary">
       <h2>PROFILE SUMMARY</h2>
@@ -314,21 +263,17 @@
 
     <!-- Core Values -->
     <section id="Core Values">
-      <div class="values-card">
-        <h2>CORE VALUES</h2>
-        <div class="value-visual">
-          <div style="position:relative;">
-            <div class="core-circle"></div>
-            <div class="core-center"><div><strong>My</strong><br><small>Core Values</small></div></div>
-            <div class="labels">
-              <div class="label label--1"><span class="text" style="--rotate: -60deg;">Leadership</span></div>
-              <div class="label label--2"><span class="text" style="--rotate: 0deg;">Empathy</span></div>
-              <div class="label label--3"><span class="text" style="--rotate: 60deg;">Critical Thinking</span></div>
-              <div class="label label--4"><span class="text" style="--rotate: 120deg;">Innovation</span></div>
-              <div class="label label--5"><span class="text" style="--rotate: 180deg;">Integrity</span></div>
-              <div class="label label--6"><span class="text" style="--rotate: 240deg;">Collaboration</span></div>
-            </div>
-          </div>
+      <h2>CORE VALUES</h2>
+      <div class="experience-item core-values-container">
+        <div class="core-circle">
+          <div class="segment">Honesty</div>
+          <div class="segment">Family</div>
+          <div class="segment">Drive</div>
+          <div class="segment">Analytical</div>
+          <div class="segment">Leadership</div>
+          <div class="segment">Empathy</div>
+          <div class="segment">Critical Thinking</div>
+          <div class="segment">Creativity</div>
         </div>
       </div>
     </section>
@@ -338,5 +283,6 @@
       <p>&copy; 2025 Md Kausar Hamid Miji. All rights reserved. Banner Image Source: Internet.</p>
     </footer>
   </div>
+
 </body>
 </html>
