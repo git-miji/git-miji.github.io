@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Miji's Portfolio - Contact</title>
+  <title>Miji's Portfolio - Template</title>
   <style>
     body {
       margin: 0;
@@ -78,30 +78,6 @@
       color: #f39c12;
     }
 
-    /* Section Heading (like Work Experience) */
-    h2 {
-      font-size: 40px;
-      margin: 30px 0 20px;
-      text-align: center;
-      color: #001F3F;
-    }
-
-    /* Section Heading (like Work Experience) */
-    h3 {
-      font-size: 24px;
-      margin: 30px 0 20px;
-      text-align: center;
-      color:  darkgreen;
-    }
-
-    /* Section Heading (like Work Experience) */
-    h4 {
-      font-size: 24px;
-      margin: 30px 0 20px;
-      text-align: center;
-      color:  darkgreen;
-    }
-    
     footer {
       border-top: 1px solid #ccc;
       padding-top: 20px;
@@ -112,10 +88,6 @@
     }
 
     @media(max-width: 768px) {
-      .contact-columns {
-        flex-direction: column;
-      }
-
       .topbar {
         flex-direction: column;
         align-items: flex-start;
@@ -153,96 +125,13 @@
     </nav>
   </div>
 
-  <!-- Contact Section -->
-  <div class="main-content">
-    <h2>CONTACT</h2>
-    <div class="contact-container">
-        <h4>Please feel free to reach out using the contact information below, or send a message directly through the form.</h4>
+  <!-- Placeholder for injected content -->
+  <div id="main-content"></div>
 
-      <div class="contact-columns">
-
-        <!-- Left Column: Contact Info -->
-        <div class="contact-left">
-          <div class="contact-info">
-            <div class="contact-row">
-              <span class="label"><strong>Address:</strong></span>
-              <span class="value">
-                Care of: Beth Riley, Director<br>
-                Ivanhoe International Center<br>
-                501 E. Saint Joseph St.<br>
-                Rapid City, SD 57701<br>
-                Email: md.miji@mines.sdsmt.edu
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Contact Form -->
-        <div class="contact-right">
-          <h4><p>Fill out the form below to send me a message directly.</p></h4>
-
-          <form id="contactForm" action="https://formspree.io/f/xqaqyzdp" method="POST" novalidate>
-            <p class="required-note">Fields marked <span style="color:red;">*</span> are required.</p>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">First Name <span style="color:red;">*</span></label>
-                <input type="text" id="firstName" name="firstName" required>
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name <span style="color:red;">*</span></label>
-                <input type="text" id="lastName" name="lastName" required>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email <span style="color:red;">*</span></label>
-                <input type="email" id="email" name="email" required>
-                <small id="emailError" style="color:red; display:none;">Please enter a valid email address.</small>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone <span style="color:red;">*</span></label>
-                <input type="tel" id="phone" name="phone" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="subject">Subject <span style="color:red;">*</span></label>
-              <input type="text" id="subject" name="subject" required>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message <span style="color:red;">*</span></label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Md Kausar Hamid Miji. All rights reserved. Banner Image Source: Internet.</p>
   </footer>
-
-  <script>
-    // Email validation
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-      const emailInput = document.getElementById("email");
-      const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-      if (!emailPattern.test(emailInput.value)) {
-        e.preventDefault();
-        document.getElementById("emailError").style.display = "block";
-        emailInput.focus();
-      } else {
-        document.getElementById("emailError").style.display = "none";
-      }
-    });
-  </script>
 
 </body>
 </html>
