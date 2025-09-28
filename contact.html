@@ -124,8 +124,171 @@ h2 {
       font-size: 16px;
       line-height: 1.6;
     }
+    
+    .experience-item {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-/*Email Form*/
+    .experience-item strong {
+      font-size: 18px;
+    }
+
+    .experience-item p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .company-duration {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+
+    .duration {
+      color: #666;
+      font-style: italic;
+    }
+/*Adding Bullet Point for Job Roles*/
+.roles-list {
+  list-style-type: square;  /* square bullets */
+  margin-left: 20px;        /* indentation */
+  padding-left: 15px;
+}
+
+.roles-list li {
+  margin-bottom: 8px;       /* spacing between points */
+  line-height: 1.6;         /* better readability */
+}
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Georgia, serif;
+    }
+
+    table td {
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    table td:first-child {
+      font-weight: bold;
+    }
+
+    footer {
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+      font-size: 14px;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .company-duration {
+        flex-direction: column;
+      }
+
+      .main-content {
+        margin: 0 20px;
+      }
+    }
+
+/* Core Competencies Section */
+#Core\ Competency {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#Core\ Competency h2 {
+  font-size: 32px;
+  color: navy;
+  text-decoration: underline;
+  font-style: italic;
+  font-family: "Cursive", sans-serif;
+  margin-bottom: 25px;
+}
+
+/* Competency Grid Layout */
+.competency-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 boxes per row */
+  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); ### Flexible columns */
+  gap: 20px;
+  justify-content: center;  /* centers leftover boxes in last row */
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Competency Box */
+.competency-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;   /* Max width for large screens */
+  min-height: 200px;  /* Ensures it grows with text */
+  padding: 15px;
+  border: 2px solid navy;
+  border-radius: 12px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+  font-style: italic;
+  font-family: "Cursive", sans-serif;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  text-align: center;
+}
+
+.competency-box:hover {
+  transform: scale(1.05);
+  background-color: #eef3ff;
+}
+
+/* Competency Circle (Flexible) */
+.competency-circle {
+  width: auto;              /* Scales relative to box */
+  aspect-ratio: 1 / 1;     /* Keeps circle round */
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid navy;
+  background-color: #ccc;  /* Default */
+  transition: background-color 0.3s ease;
+}
+
+/* Competency Title */
+.competency-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Competency Content */
+.competency-content p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* 🔹 Utility Classes for Box Colors */
+.box-blue { background-color: #dbeafe; }   /* light blue */
+.box-green { background-color: #dcfce7; }  /* light green */
+.box-yellow { background-color: #fef9c3; } /* light yellow */
+.box-red { background-color: #fee2e2; }    /* light red */
+.box-purple { background-color: #ede9fe; } /* light purple */
+
+/* 🔹 Utility Classes for Circle Colors */
+.circle-blue { background-color: #3b82f6; }   /* blue */
+.circle-green { background-color: #22c55e; }  /* green */
+.circle-yellow { background-color: #eab308; } /* yellow */
+.circle-red { background-color: #ef4444; }    /* red */
+.circle-purple { background-color: #a855f7; } /* purple */  
 
     body {
       font-family: Arial, sans-serif;
@@ -206,34 +369,9 @@ h2 {
       color: red;
     }
 
+
+
     
-    footer {
-      border-top: 1px solid #ccc;
-      padding-top: 20px;
-      font-size: 14px;
-      color: #777;
-      margin-top: 40px;
-    }
-
-      .main-content {
-        margin: 0 20px;
-      }
-    }
-
-
-/* 🔹 Utility Classes for Box Colors */
-.box-blue { background-color: #dbeafe; }   /* light blue */
-.box-green { background-color: #dcfce7; }  /* light green */
-.box-yellow { background-color: #fef9c3; } /* light yellow */
-.box-red { background-color: #fee2e2; }    /* light red */
-.box-purple { background-color: #ede9fe; } /* light purple */
-
-/* 🔹 Utility Classes for Circle Colors */
-.circle-blue { background-color: #3b82f6; }   /* blue */
-.circle-green { background-color: #22c55e; }  /* green */
-.circle-yellow { background-color: #eab308; } /* yellow */
-.circle-red { background-color: #ef4444; }    /* red */
-.circle-purple { background-color: #a855f7; } /* purple */  
   </style>
 </head>
 
