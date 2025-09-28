@@ -11,7 +11,7 @@
       background: #f5f5f5;
     }
 
-    /* Hero Photo Banner */
+    /* Hero Photo Banner  */
     .hero-photo {
       position: relative;
       width: 100%;
@@ -91,7 +91,7 @@
       color: #001F3F;
     }
 
-    /* Work Experience */
+    /* Work Experience Cards */
     .work-experience {
       display: flex;
       flex-direction: column;
@@ -144,23 +144,21 @@
       font-weight: 500;
     }
 
-    /* Contact info formatting */
-    .contact-row {
-      display: flex;
-      align-items: flex-start;
-      margin: 6px 0;
-      justify-content: center;
+    /* Contact Info */
+    .contact-info {
+      margin-top: 8px;
       text-align: left;
     }
 
-    .contact-row .label {
-      width: 90px;
-      font-weight: bold;
-      flex-shrink: 0;
+    .label-block {
+      margin: 8px 0;
+      padding-left: 90px;
+      text-indent: -90px;
     }
 
-    .contact-row .value {
-      flex: 1;
+    .label-block strong {
+      display: inline-block;
+      width: 90px;
     }
 
     footer {
@@ -169,6 +167,7 @@
       font-size: 14px;
       color: #777;
       margin-top: 40px;
+      text-align: center;
     }
 
     /* Responsive adjustments */
@@ -176,7 +175,9 @@
       .main-content {
         margin: 0 20px;
       }
-
+      .work-experience {
+        width: 100%;
+      }
       .photo-container {
         width: 100%;
         height: auto;
@@ -199,7 +200,7 @@
   <div class="topbar">
     <h1>Md Kausar Hamid Miji</h1>
     <nav>
-      <ul>
+      <ul class="job-roles">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="Work_Experience.html">Work Experience</a></li>
@@ -210,7 +211,7 @@
     </nav>
   </div>
 
- <!-- Main content -->
+  <!-- Main content -->
   <div class="main-content">
     <section id="Experience">
       <h2>WORK EXPERIENCE</h2>
