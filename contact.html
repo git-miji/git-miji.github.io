@@ -78,11 +78,11 @@
       color: #f39c12;
     }
 
-    /* Main content */
+    /* Main content container */
     .main-content {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0 1in;
+      padding: 40px 0;
+      max-width: 1000px;
     }
 
     h2 {
@@ -129,6 +129,7 @@
 
     textarea {
       resize: vertical;
+      margin-bottom: 20px; /* separation from send button */
     }
 
     button[type="submit"] {
@@ -140,10 +141,17 @@
       font-size: 16px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      display: block;
     }
 
     button[type="submit"]:hover {
       background-color: #444;
+    }
+
+    .required-note {
+      font-size: 14px;
+      color: #e63946;
+      margin-bottom: 15px;
     }
 
     footer {
@@ -195,42 +203,60 @@
   <!-- Contact Form Section -->
   <div class="main-content" id="Contact">
     <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/xqaqyzdp" method="POST">
+    <p class="required-note">Fields marked with * are required.</p>
+
+    <form id="contactForm" action="https://formspree.io/f/xqaqyzdp" method="POST" novalidate>
 
       <div class="form-row">
         <div class="form-group">
-          <label for="firstName">First Name</label>
+          <label for="firstName">First Name *</label>
           <input type="text" id="firstName" name="firstName" placeholder="Type your first name" required>
         </div>
         <div class="form-group">
-          <label for="lastName">Last Name</label>
+          <label for="lastName">Last Name *</label>
           <input type="text" id="lastName" name="lastName" placeholder="Type your last name" required>
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group">
-          <label for="email">Email Address</label>
+          <label for="email">Email Address *</label>
           <input type="email" id="email" name="email" placeholder="Type your email" required>
+          <small id="emailError" style="color:red; display:none;">Please enter a valid email address.</small>
         </div>
         <div class="form-group">
-          <label for="phone">Phone Number</label>
+          <label for="phone">Phone Number *</label>
           <input type="tel" id="phone" name="phone" placeholder="Type your phone number" required>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="message">Message</label>
+        <label for="message">Message *</label>
         <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
       </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit">Send Message</button>
     </form>
   </div>
 
   <footer>
     &copy; 2025 Md Kausar Hamid Miji. All rights reserved.
   </footer>
+
+  <script>
+    // Email validation
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      const emailInput = document.getElementById("email");
+      const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+      if (!emailPattern.test(emailInput.value)) {
+        e.preventDefault();
+        document.getElementById("emailError").style.display = "block";
+        emailInput.focus();
+      } else {
+        document.getElementById("emailError").style.display = "none";
+      }
+    });
+  </script>
 
 </body>
 </html>
