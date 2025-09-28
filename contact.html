@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     body {
-      margin-left: 1in;
-      margin-right: 1in;
+      margin: 0;
       font-family: Arial, sans-serif;
       background: #f5f5f5;
     }
@@ -34,7 +33,7 @@
       left: 50%;
       transform: translateX(-50%);
       font-size: 32px;
-      color: white;
+      color: #FFD700;
       font-weight: bold;
       text-align: center;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
@@ -79,7 +78,11 @@
       color: #f39c12;
     }
 
-    /* Section headings */
+    /* Page container with 1in margins */
+    .page-container {
+      margin: 0 1in;
+    }
+
     h2 {
       font-size: 40px;
       margin: 30px 0 20px;
@@ -142,7 +145,7 @@
     .form-group input,
     .form-group textarea {
       width: 100%;
-      max-width: 400px; /* limit box length */
+      max-width: 400px;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 6px;
@@ -252,84 +255,88 @@
     </nav>
   </div>
 
-  <!-- Contact Section -->
-  <section id="Contact">
-    <h2>Contact</h2>
+  <!-- Main content container with 1in margins -->
+  <div class="page-container">
 
-    <div class="contact-container">
-      <!-- Left Column -->
-      <div class="contact-info-box">
-        <div class="contact-info">
-          <div class="contact-row">
-            <span class="label">Address:</span>
-            <span class="value">
-              501 E. Saint Joseph St.<br>
-              Rapid City, SD 57701<br>
-              (605) 653-2893<br>
-              800-544-8162 (toll free)
-            </span>
+    <!-- Contact Section -->
+    <section id="Contact">
+      <h2>Contact</h2>
+      <div class="contact-container">
+        <!-- Left Column -->
+        <div class="contact-info-box">
+          <div class="contact-info">
+            <div class="contact-row">
+              <span class="label">Address:</span>
+              <span class="value">
+                501 E. Saint Joseph St.<br>
+                Rapid City, SD 57701<br>
+                (605) 653-2893<br>
+                800-544-8162 (toll free)
+              </span>
+            </div>
+            <div class="contact-row">
+              <span class="label">Website:</span>
+              <span class="value">
+                <a href="https://sdsmt.edu/index.html" target="_blank">https://sdsmt.edu/index.html</a>
+              </span>
+            </div>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/md-miji/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://twitter.com/" target="_blank"><i class="fab fa-x-twitter fa-2x"></i></a>
+            </div>
           </div>
-          <div class="contact-row">
-            <span class="label">Website:</span>
-            <span class="value">
-              <a href="https://sdsmt.edu/index.html" target="_blank">https://sdsmt.edu/index.html</a>
-            </span>
-          </div>
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/md-miji/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="https://twitter.com/" target="_blank"><i class="fab fa-x-twitter fa-2x"></i></a>
+        </div>
+
+        <!-- Divider -->
+        <div class="vertical-divider"></div>
+
+        <!-- Right Column -->
+        <div class="contact-form-box">
+          <form id="contactForm" action="https://formspree.io/f/xqaqyzdp" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="required" for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Type your first name" required>
+              </div>
+              <div class="form-group">
+                <label class="required" for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Type your last name" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="required" for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Type your email" required>
+              </div>
+              <div class="form-group">
+                <label class="required" for="subject">Email Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Type subject" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="required" for="message">Email Body</label>
+              <textarea id="message" name="message" placeholder="Type your message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+
+          <div id="thank-you-message" style="display: none; margin-top: 15px;">
+            <h3>Thank you so much for contacting me. I will get back to you soon.</h3>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Divider -->
-      <div class="vertical-divider"></div>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Md Kausar Hamid Miji. All rights reserved. Banner Image Source: Internet.</p>
+    </footer>
 
-      <!-- Right Column -->
-      <div class="contact-form-box">
-        <form id="contactForm" action="https://formspree.io/f/xqaqyzdp" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="required" for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" placeholder="Type your first name" required>
-            </div>
-            <div class="form-group">
-              <label class="required" for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" placeholder="Type your last name" required>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label class="required" for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="Type your email" required>
-            </div>
-            <div class="form-group">
-              <label class="required" for="subject">Email Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Type subject" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="required" for="message">Email Body</label>
-            <textarea id="message" name="message" placeholder="Type your message" required></textarea>
-          </div>
-
-          <button type="submit" class="btn-submit">Submit</button>
-        </form>
-
-        <div id="thank-you-message" style="display: none; margin-top: 15px;">
-          <h3>Thank you so much for contacting me. I will get back to you soon.</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Md Kausar Hamid Miji. All rights reserved. Banner Image Source: Internet.</p>
-  </footer>
+  </div>
 
   <script>
     const form = document.getElementById('contactForm');
@@ -362,6 +369,5 @@
       });
     });
   </script>
-
 </body>
 </html>
