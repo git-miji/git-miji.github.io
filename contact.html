@@ -11,7 +11,7 @@
       background: #f5f5f5;
     }
 
-    /* Hero Photo Banner  */
+    /* Hero Photo Banner */
     .hero-photo {
       position: relative;
       width: 100%;
@@ -26,7 +26,7 @@
       display: block;
     }
 
-    .hero-text {
+   .hero-text {
       position: absolute;
       bottom: 60px;
       left: 50%;
@@ -41,21 +41,6 @@
       width: 90%;
     }
 
-   /* Profile Photo below Topbar */
-    .profile-photo-container {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .profile-photo-container img {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #111;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    }
-    
     /* Topbar */
     .topbar {
       background-color: #111;
@@ -114,17 +99,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-.general-item {
-      background: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
-  .general-item p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-    
     .experience-item {
       background: #fff;
       padding: 20px;
@@ -198,184 +172,11 @@ h2 {
         margin: 0 20px;
       }
     }
-
-/* Core Competencies Section */
-#Core\ Competency {
-  text-align: center;
-  margin-top: 40px;
-}
-
-#Core\ Competency h2 {
-  font-size: 32px;
-  color: navy;
-  text-decoration: underline;
-  font-style: italic;
-  font-family: "Cursive", sans-serif;
-  margin-bottom: 25px;
-}
-
-/* Competency Grid Layout */
-.competency-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 boxes per row */
-  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); ### Flexible columns */
-  gap: 20px;
-  justify-content: center;  /* centers leftover boxes in last row */
-  margin-top: 20px;
-  width: 100%;
-}
-
-/* Competency Box */
-.competency-box {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  width: 100%;
-  max-width: 320px;   /* Max width for large screens */
-  min-height: 200px;  /* Ensures it grows with text */
-  padding: 15px;
-  border: 2px solid navy;
-  border-radius: 12px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
-  font-style: italic;
-  font-family: "Cursive", sans-serif;
-  background-color: #f9f9f9;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-  text-align: center;
-}
-
-.competency-box:hover {
-  transform: scale(1.05);
-  background-color: #eef3ff;
-}
-
-/* Competency Circle (Flexible) */
-.competency-circle {
-  width: auto;              /* Scales relative to box */
-  aspect-ratio: 1 / 1;     /* Keeps circle round */
-  border-radius: 50%;
-  margin-bottom: 10px;
-  border: 2px solid navy;
-  background-color: #ccc;  /* Default */
-  transition: background-color 0.3s ease;
-}
-
-/* Competency Title */
-.competency-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-/* Competency Content */
-.competency-content p {
-  margin: 2px 0;
-  font-size: 14px;
-  color: #444;
-}
-
-/* 🔹 Utility Classes for Box Colors */
-.box-blue { background-color: #dbeafe; }   /* light blue */
-.box-green { background-color: #dcfce7; }  /* light green */
-.box-yellow { background-color: #fef9c3; } /* light yellow */
-.box-red { background-color: #fee2e2; }    /* light red */
-.box-purple { background-color: #ede9fe; } /* light purple */
-
-/* 🔹 Utility Classes for Circle Colors */
-.circle-blue { background-color: #3b82f6; }   /* blue */
-.circle-green { background-color: #22c55e; }  /* green */
-.circle-yellow { background-color: #eab308; } /* yellow */
-.circle-red { background-color: #ef4444; }    /* red */
-.circle-purple { background-color: #a855f7; } /* purple */  
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .contact-form {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
-      width: 100%;
-    }
-
-    .contact-form h2 {
-      margin-bottom: 20px;
-      font-size: 24px;
-      text-align: center;
-      color: #001F3F;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-      transition: border-color 0.3s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: #007bff;
-      outline: none;
-    }
-
-    textarea {
-      resize: vertical;
-      height: 120px;
-    }
-
-    .btn-submit {
-      width: 100%;
-      background: #007bff;
-      color: #fff;
-      border: none;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .btn-submit:hover {
-      background: #0056b3;
-    }
-
-    .required {
-      color: red;
-    }
-
-
-
-    
   </style>
 </head>
 
 <body>
+
   <!-- Hero Photo Banner -->
   <div class="hero-photo">
     <img src="ocean-banner.jpg" alt="Banner">
@@ -398,31 +199,34 @@ h2 {
       </ul>
     </nav>
   </div>
-  <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
-    <h2>Contact Me</h2>
+  
+<!--**************************************************************************************************************** -->
+<!--Contact Section -->
+<!--**************************************************************************************************************** -->
+       <!-- Include Font Awesome for icons (CDN) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<div class="main-content">
+  <section id="Contact">
+      <h2>CONTACT</h2>
+          <div class="experience-item">    
+  <!--<div class="experience-item contact-info"-->
+    
+    <!-- Name -->
+    <p><i class="fas fa-user"></i> Md Kausar Hamid Miji</p>
+    
+    <!-- Email -->
+    <p><i class="fas fa-envelope"></i> <a href="mailto:md.miji@mines.sdsmt.edu">md.miji@mines.sdsmt.edu</a></p>
+    
+    <!-- Address -->
+    <p><i class="fas fa-map-marker-alt"></i> Rapid City, SD, USA - 57701</p>
 
-    <div class="form-group">
-      <label for="name">Name <span class="required">*</span></label>
-      <input type="text" id="name" name="name" required>
-    </div>
+    <!-- LinkedIn -->
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/md-miji/" target="_blank">LinkedIn</a></p>
 
-    <div class="form-group">
-      <label for="email">Email <span class="required">*</span></label>
-      <input type="email" id="email" name="_replyto" required>
-    </div>
-
-    <div class="form-group">
-      <label for="subject">Subject <span class="required">*</span></label>
-      <input type="text" id="subject" name="subject" required>
-    </div>
-
-    <div class="form-group">
-      <label for="message">Message <span class="required">*</span></label>
-      <textarea id="message" name="message" required></textarea>
-    </div>
-
-    <button type="submit" class="btn-submit">Send Message</button>
-  </form>
-
-</body>
-</html>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Md Kausar Hamid Miji. All rights reserved. Banner Image Source: Internet.</p>
+    </footer>
+            
+  </div>
+</section>
