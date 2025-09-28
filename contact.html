@@ -109,23 +109,39 @@
       margin-top: 40px;
     }
 
-    /* Contact Form Styles */
-   /* Two-column layout */
+/* Two-column layout with divider */
 .contact-container {
   display: flex;
-  gap: 40px;
   justify-content: space-between;
-  flex-wrap: wrap;
+  gap: 40px;
+  flex-wrap: nowrap;
+  align-items: stretch;
 }
 
+/* Left column: vertically centered, right aligned */
 .contact-info-box {
   flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
   min-width: 250px;
-  font-size: 16px;
 }
 
+.contact-info-content {
+  max-width: 250px;
+}
+
+/* Divider */
+.vertical-divider {
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 20px;
+}
+
+/* Right column: form */
 .contact-form-box {
-  flex: 1;
+  flex: 2;
   min-width: 300px;
   background: #fff;
   padding: 25px;
@@ -145,6 +161,7 @@
   margin-top: 20px;
   display: flex;
   gap: 20px;
+  justify-content: flex-end;
 }
 
 .social-icons a {
@@ -201,6 +218,17 @@ textarea {
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
+    align-items: center;
+  }
+  .vertical-divider {
+    display: none;
+  }
+  .contact-info-box {
+    text-align: center;
+    justify-content: center;
+  }
+  .social-icons {
+    justify-content: center;
   }
 }
   </style>
@@ -231,25 +259,34 @@ textarea {
     </nav>
   </div>
 
-<div class="main-content">
 <!--**************************************************************************************************************** -->
 <!--Contact Section -->
 <!--**************************************************************************************************************** -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<div class="main-content">
   <section id="Contact">
-      <div class="experience-item">  
+      <h2>CONTACT</h2>
+
+      <div class="contact-container">
         <!-- Left Column: Contact Info -->
         <div class="contact-info-box">
-          <p><strong>Address:</strong> 501 E Saint Joseph St.</p>
-          <p><strong>Email:</strong> <a href="mailto:md.miji@mines.sdsmt.edu">md.miji@mines.sdsmt.edu</a></p>
+          <div class="contact-info-content">
+            <p><strong>Address:</strong><br> 501 E Saint Joseph St.</p>
+            <p><strong>Email:</strong><br> 
+              <a href="mailto:md.miji@mines.sdsmt.edu">md.miji@mines.sdsmt.edu</a>
+            </p>
 
-          <!-- Social Media Logos -->
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/md-miji/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="https://twitter.com/" target="_blank"><i class="fab fa-x-twitter fa-2x"></i></a>
+            <!-- Social Media Logos -->
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/md-miji/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://twitter.com/" target="_blank"><i class="fab fa-x-twitter fa-2x"></i></a>
+            </div>
           </div>
         </div>
+
+        <!-- Divider -->
+        <div class="vertical-divider"></div>
 
         <!-- Right Column: Contact Form -->
         <div class="contact-form-box">
@@ -286,6 +323,7 @@ textarea {
       </footer>
   </section>
 </div>
+
 
 </body>
 </html>
