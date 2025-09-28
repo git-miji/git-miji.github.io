@@ -125,33 +125,6 @@
       line-height: 1.6;
     }
 
-    .company-duration {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 10px;
-    }
-
-    .duration {
-      color: #666;
-      font-style: italic;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-family: Georgia, serif;
-    }
-
-    table td {
-      padding: 8px;
-      vertical-align: top;
-    }
-
-    table td:first-child {
-      font-weight: bold;
-    }
-
     footer {
       border-top: 1px solid #ccc;
       padding-top: 20px;
@@ -160,53 +133,57 @@
       margin-top: 40px;
     }
 
-    /* Core Values Section */
+    /* Core Values Pie Chart */
     .core-values-container {
       background: #fff;
       padding: 30px;
       margin-bottom: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      text-align: center;
     }
 
-    .core-circle {
-      position: relative;
+    .pie-chart {
       width: 400px;
       height: 400px;
       border-radius: 50%;
-      border: 3px solid #2c3e50;
       margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 20px;
-      box-sizing: border-box;
+      background: conic-gradient(
+        #e74c3c 0% 12.5%,      /* Honesty */
+        #3498db 12.5% 25%,    /* Family */
+        #2ecc71 25% 37.5%,    /* Drive */
+        #f1c40f 37.5% 50%,    /* Analytical */
+        #9b59b6 50% 62.5%,    /* Leadership */
+        #1abc9c 62.5% 75%,    /* Empathy */
+        #e67e22 75% 87.5%,    /* Critical Thinking */
+        #34495e 87.5% 100%    /* Creativity */
+      );
+      position: relative;
     }
 
-    .core-circle .segment {
-      flex: 1 1 45%;
+    .pie-chart .label {
+      position: absolute;
+      width: 100px;
       text-align: center;
       font-weight: bold;
-      color: #2c3e50;
-      margin: 10px 0;
+      color: #fff;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .company-duration {
-        flex-direction: column;
-      }
+    /* Position labels around circle */
+    .label1 { top: 10%; left: 50%; transform: translate(-50%, -50%); }
+    .label2 { top: 25%; left: 85%; transform: translate(-50%, -50%); }
+    .label3 { top: 50%; left: 95%; transform: translate(-50%, -50%); }
+    .label4 { top: 75%; left: 85%; transform: translate(-50%, -50%); }
+    .label5 { top: 90%; left: 50%; transform: translate(-50%, -50%); }
+    .label6 { top: 75%; left: 15%; transform: translate(-50%, -50%); }
+    .label7 { top: 50%; left: 5%; transform: translate(-50%, -50%); }
+    .label8 { top: 25%; left: 15%; transform: translate(-50%, -50%); }
 
+    @media (max-width: 768px) {
       .main-content {
         margin: 0 20px;
       }
-
-      .core-circle {
+      .pie-chart {
         width: 300px;
         height: 300px;
       }
@@ -239,7 +216,7 @@
     </nav>
   </div>
 
-  <!-- Profile Photo below Topbar -->
+  <!-- Profile Photo -->
   <div class="profile-photo-container">
     <img src="profile_pic.jpg" alt="Md Kausar Hamid Miji">
   </div>
@@ -265,15 +242,15 @@
     <section id="Core Values">
       <h2>CORE VALUES</h2>
       <div class="experience-item core-values-container">
-        <div class="core-circle">
-          <div class="segment">Honesty</div>
-          <div class="segment">Family</div>
-          <div class="segment">Drive</div>
-          <div class="segment">Analytical</div>
-          <div class="segment">Leadership</div>
-          <div class="segment">Empathy</div>
-          <div class="segment">Critical Thinking</div>
-          <div class="segment">Creativity</div>
+        <div class="pie-chart">
+          <div class="label label1">Honesty</div>
+          <div class="label label2">Family</div>
+          <div class="label label3">Drive</div>
+          <div class="label label4">Analytical</div>
+          <div class="label label5">Leadership</div>
+          <div class="label label6">Empathy</div>
+          <div class="label label7">Critical Thinking</div>
+          <div class="label label8">Creativity</div>
         </div>
       </div>
     </section>
