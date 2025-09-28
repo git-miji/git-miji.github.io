@@ -81,6 +81,7 @@
     /* Page container with 1in margins */
     .page-container {
       margin: 0 1in;
+      padding: 30px 0;
     }
 
     h2 {
@@ -88,7 +89,6 @@
       margin: 30px 0 20px;
       text-align: center;
       color: #001F3F;
-      padding-bottom: 5px;
     }
 
     /* Contact Container */
@@ -99,8 +99,7 @@
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      align-items: center;
-      margin-bottom: 40px;
+      align-items: stretch; /* makes divider relative to container */
     }
 
     .contact-info-box {
@@ -118,17 +117,23 @@
     .vertical-divider {
       width: 1px;
       background-color: #ccc;
-      align-self: center;
-      height: 50%;
+      align-self: center; /* center vertically */
+      height: 50%; /* half the height of container */
     }
 
     .contact-form-box {
       flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* vertical centering */
+      align-items: center; /* horizontal centering */
     }
 
     /* Form */
     .form-group {
       margin-bottom: 15px;
+      width: 100%;
+      max-width: 400px;
     }
 
     .form-group label {
@@ -145,7 +150,6 @@
     .form-group input,
     .form-group textarea {
       width: 100%;
-      max-width: 400px;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 6px;
@@ -195,6 +199,7 @@
     @media (max-width: 768px) {
       .contact-container {
         flex-direction: column;
+        align-items: center;
       }
       .vertical-divider {
         display: none;
@@ -206,6 +211,9 @@
       }
       .social-icons {
         justify-content: center;
+      }
+      .contact-form-box {
+        align-items: center;
       }
     }
 
@@ -255,13 +263,14 @@
     </nav>
   </div>
 
-  <!-- Main content container with 1in margins -->
+  <!-- Page container -->
   <div class="page-container">
 
     <!-- Contact Section -->
     <section id="Contact">
       <h2>Contact</h2>
       <div class="contact-container">
+
         <!-- Left Column -->
         <div class="contact-info-box">
           <div class="contact-info">
@@ -328,6 +337,7 @@
             <h3>Thank you so much for contacting me. I will get back to you soon.</h3>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -369,5 +379,6 @@
       });
     });
   </script>
+
 </body>
 </html>
