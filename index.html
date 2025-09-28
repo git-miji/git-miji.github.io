@@ -38,7 +38,7 @@
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
       width: 90%;
     }
-    
+
     /* Topbar */
     .topbar {
       background-color: #111;
@@ -92,7 +92,7 @@
       border: 4px solid #111;
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
-    
+
     /* Main content */
     .main-content {
       margin: 0 1in;
@@ -125,18 +125,46 @@
       line-height: 1.6;
     }
 
+    .company-duration {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+
+    .duration {
+      color: #666;
+      font-style: italic;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Georgia, serif;
+    }
+
+    table td {
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    table td:first-child {
+      font-weight: bold;
+    }
+
     footer {
       border-top: 1px solid #ccc;
       padding-top: 20px;
       font-size: 14px;
       color: #777;
       margin-top: 40px;
+      text-align: center;
     }
 
     /* Core Values Pie Chart */
-    .core-values-container {
+    .core-values {
       background: #fff;
-      padding: 30px;
+      padding: 20px;
       margin-bottom: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -144,53 +172,62 @@
     }
 
     .pie-chart {
+      position: relative;
       width: 400px;
       height: 400px;
+      margin: auto;
       border-radius: 50%;
-      margin: 0 auto;
       background: conic-gradient(
-        #e74c3c 0% 12.5%,      /* Honesty */
-        #3498db 12.5% 25%,    /* Family */
-        #2ecc71 25% 37.5%,    /* Drive */
-        #f1c40f 37.5% 50%,    /* Analytical */
-        #9b59b6 50% 62.5%,    /* Leadership */
-        #1abc9c 62.5% 75%,    /* Empathy */
-        #e67e22 75% 87.5%,    /* Critical Thinking */
-        #34495e 87.5% 100%    /* Creativity */
+        #4CAF50 0deg 60deg,    /* Honesty */
+        #2196F3 60deg 120deg,  /* Family */
+        #FFC107 120deg 180deg, /* Drive */
+        #E91E63 180deg 240deg, /* Analytical */
+        #9C27B0 240deg 300deg, /* Empathy */
+        #FF5722 300deg 360deg  /* Leadership */
       );
-      position: relative;
     }
 
-    .pie-chart .label {
+    .label {
       position: absolute;
       width: 100px;
       text-align: center;
+      font-size: 14px;
       font-weight: bold;
-      color: #fff;
+      color: white;
+      transform-origin: 200px 200px;
     }
 
-    /* Position labels around circle */
-    .label1 { top: 10%; left: 50%; transform: translate(-50%, -50%); }
-    .label2 { top: 25%; left: 85%; transform: translate(-50%, -50%); }
-    .label3 { top: 50%; left: 95%; transform: translate(-50%, -50%); }
-    .label4 { top: 75%; left: 85%; transform: translate(-50%, -50%); }
-    .label5 { top: 90%; left: 50%; transform: translate(-50%, -50%); }
-    .label6 { top: 75%; left: 15%; transform: translate(-50%, -50%); }
-    .label7 { top: 50%; left: 5%; transform: translate(-50%, -50%); }
-    .label8 { top: 25%; left: 15%; transform: translate(-50%, -50%); }
+    /* Position each label inside its slice */
+    .label1 { transform: rotate(30deg) translate(140px) rotate(-30deg); }
+    .label2 { transform: rotate(90deg) translate(140px) rotate(-90deg); }
+    .label3 { transform: rotate(150deg) translate(140px) rotate(-150deg); }
+    .label4 { transform: rotate(210deg) translate(140px) rotate(-210deg); }
+    .label5 { transform: rotate(270deg) translate(140px) rotate(-270deg); }
+    .label6 { transform: rotate(330deg) translate(140px) rotate(-330deg); }
 
+    /* Responsive adjustments */
     @media (max-width: 768px) {
+      .company-duration {
+        flex-direction: column;
+      }
+
       .main-content {
         margin: 0 20px;
       }
+
       .pie-chart {
         width: 300px;
         height: 300px;
       }
+
+      .label {
+        width: 80px;
+        font-size: 12px;
+        transform-origin: 150px 150px;
+      }
     }
   </style>
 </head>
-
 <body>
 
   <!-- Hero Photo Banner -->
@@ -223,7 +260,6 @@
 
   <!-- Main content -->
   <div class="main-content">
-
     <!-- Profile Summary -->
     <section id="Profile Summary">
       <h2>PROFILE SUMMARY</h2>
@@ -241,16 +277,14 @@
     <!-- Core Values -->
     <section id="Core Values">
       <h2>CORE VALUES</h2>
-      <div class="experience-item core-values-container">
+      <div class="core-values">
         <div class="pie-chart">
           <div class="label label1">Honesty</div>
           <div class="label label2">Family</div>
           <div class="label label3">Drive</div>
           <div class="label label4">Analytical</div>
-          <div class="label label5">Leadership</div>
-          <div class="label label6">Empathy</div>
-          <div class="label label7">Critical Thinking</div>
-          <div class="label label8">Creativity</div>
+          <div class="label label5">Empathy</div>
+          <div class="label label6">Leadership</div>
         </div>
       </div>
     </section>
