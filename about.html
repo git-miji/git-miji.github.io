@@ -11,7 +11,7 @@
       background: #f5f5f5;
     }
 
-    /* Hero Photo Banner  */
+    /* Hero Photo Banner */
     .hero-photo {
       position: relative;
       width: 100%;
@@ -39,7 +39,7 @@
       width: 90%;
     }
 
-   /* Profile Photo below Topbar */
+    /* Profile Photo */
     .profile-photo-container {
       text-align: center;
       margin: 20px 0;
@@ -64,7 +64,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -100,44 +99,21 @@
       padding: 30px 0;
     }
 
-h2 {
-  font-size: 40px;
-  margin: 30px 0 20px;
-  text-align: center;
-  color: #001F3F;              /* Navy blue-ish */
-  /* text-decoration: underline;  #### Underline text */
- /* font-style: italic;          ### Italic */
- /*  font-family: "Brush Script MT", cursive, "Comic Sans MS", serif; ###### Curly/cursive style */
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-}
-
-.general-item {
-      background: #fff;
-      padding: 20px;
+    h2 {
+      font-size: 40px;
+      margin: 30px 0 20px;
+      text-align: center;
+      color: #001F3F;
+      padding-bottom: 5px;
       margin-bottom: 20px;
-      border-radius: 8px;
     }
-  .general-item p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-    
-    .experience-item {
+
+    .general-item, .experience-item {
       background: #fff;
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .experience-item strong {
-      font-size: 18px;
-    }
-
-    .experience-item p {
-      font-size: 16px;
-      line-height: 1.6;
     }
 
     .company-duration {
@@ -151,31 +127,17 @@ h2 {
       color: #666;
       font-style: italic;
     }
-/*Adding Bullet Point for Job Roles*/
-.roles-list {
-  list-style-type: square;  /* square bullets */
-  margin-left: 20px;        /* indentation */
-  padding-left: 15px;
-}
 
-.roles-list li {
-  margin-bottom: 8px;       /* spacing between points */
-  line-height: 1.6;         /* better readability */
-}
-    
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-family: Georgia, serif;
+    /* Bullet list */
+    .roles-list {
+      list-style-type: square;
+      margin-left: 20px;
+      padding-left: 15px;
     }
 
-    table td {
-      padding: 8px;
-      vertical-align: top;
-    }
-
-    table td:first-child {
-      font-weight: bold;
+    .roles-list li {
+      margin-bottom: 8px;
+      line-height: 1.6;
     }
 
     footer {
@@ -186,113 +148,88 @@ h2 {
       margin-top: 40px;
     }
 
-    /* Responsive adjustments */
+    /* Responsive */
     @media (max-width: 768px) {
       .company-duration {
         flex-direction: column;
       }
-
       .main-content {
         margin: 0 20px;
       }
+      .competency-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on small screens */
+      }
     }
 
-/* Core Competencies Section */
-#Core\ Competency {
-  text-align: center;
-  margin-top: 40px;
-}
+    /* Core Competency Section */
+    #CoreCompetency {
+      text-align: center;
+      margin-top: 40px;
+    }
 
-#Core\ Competency h2 {
-  font-size: 32px;
-  color: navy;
-  text-decoration: underline;
-  font-style: italic;
-  font-family: "Cursive", sans-serif;
-  margin-bottom: 25px;
-}
+    #CoreCompetency h2 {
+      font-size: 32px;
+      color: navy;
+      text-decoration: underline;
+      font-style: italic;
+      font-family: "Cursive", sans-serif;
+      margin-bottom: 25px;
+    }
 
-/* Competency Grid Layout */
-.competency-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 boxes per row */
-  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); ### Flexible columns */
-  gap: 20px;
-  justify-content: center;  /* centers leftover boxes in last row */
-  margin-top: 20px;
-  width: 100%;
-}
+    /* Grid - 2 rows × 4 columns */
+    .competency-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      justify-items: center;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
 
-/* Competency Box */
-.competency-box {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  width: 100%;
-  max-width: 320px;   /* Max width for large screens */
-  min-height: 200px;  /* Ensures it grows with text */
-  padding: 15px;
-  border: 2px solid navy;
-  border-radius: 12px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
-  font-style: italic;
-  font-family: "Cursive", sans-serif;
-  background-color: #f9f9f9;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-  text-align: center;
-}
+    /* Box style */
+    .competency-box {
+      background: #f9f9f9;
+      padding: 20px;
+      border: 2px solid navy;
+      border-radius: 12px;
+      text-align: center;
+      font-style: italic;
+      font-family: "Cursive", sans-serif;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease, background-color 0.3s ease;
+      min-height: 150px;
+      width: 100%;
+    }
 
-.competency-box:hover {
-  transform: scale(1.05);
-  background-color: #eef3ff;
-}
+    .competency-box:hover {
+      transform: scale(1.05);
+      background-color: #eef3ff;
+    }
 
-/* Competency Circle (Flexible) */
-.competency-circle {
-  width: auto;              /* Scales relative to box */
-  aspect-ratio: 1 / 1;     /* Keeps circle round */
-  border-radius: 50%;
-  margin-bottom: 10px;
-  border: 2px solid navy;
-  background-color: #ccc;  /* Default */
-  transition: background-color 0.3s ease;
-}
+    .competency-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
 
-/* Competency Title */
-.competency-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
-}
+    .competency-content p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #444;
+    }
 
-/* Competency Content */
-.competency-content p {
-  margin: 2px 0;
-  font-size: 14px;
-  color: #444;
-}
-
-/* 🔹 Utility Classes for Box Colors */
-.box-blue { background-color: #dbeafe; }   /* light blue */
-.box-green { background-color: #dcfce7; }  /* light green */
-.box-yellow { background-color: #fef9c3; } /* light yellow */
-.box-red { background-color: #fee2e2; }    /* light red */
-.box-purple { background-color: #ede9fe; } /* light purple */
-
-/* 🔹 Utility Classes for Circle Colors */
-.circle-blue { background-color: #3b82f6; }   /* blue */
-.circle-green { background-color: #22c55e; }  /* green */
-.circle-yellow { background-color: #eab308; } /* yellow */
-.circle-red { background-color: #ef4444; }    /* red */
-.circle-purple { background-color: #a855f7; } /* purple */  
+    /* Utility colors */
+    .box-blue { background-color: #dbeafe; }
+    .box-green { background-color: #dcfce7; }
+    .box-yellow { background-color: #fef9c3; }
+    .box-red { background-color: #fee2e2; }
+    .box-purple { background-color: #ede9fe; }
   </style>
 </head>
 
 <body>
-
-  <!-- Hero Photo Banner -->
+  <!-- Hero Banner -->
   <div class="hero-photo">
     <img src="ocean-banner.jpg" alt="Banner">
     <div class="hero-text">
@@ -300,7 +237,7 @@ h2 {
     </div>
   </div>
 
- <!-- Topbar -->
+  <!-- Topbar -->
   <div class="topbar">
     <h1>Md Kausar Hamid Miji</h1>
     <nav>
@@ -315,140 +252,103 @@ h2 {
     </nav>
   </div>
 
-  <!-- Profile Photo below Topbar -->
+  <!-- Profile Photo -->
   <div class="profile-photo-container">
-    <img src=profile_pic.jpg alt="Md Kausar Hamid Miji">
+    <img src="profile_pic.jpg" alt="Md Kausar Hamid Miji">
   </div>
 
-<!--**************************************************************************************************************** -->
-<!--About Me Section -->
-<!--**************************************************************************************************************** -->
   <!-- Main Content -->
   <div class="main-content">
+    <!-- About -->
     <section id="About Me">
       <h2>MD KAUSAR HAMID MIJI</h2>
-<div class="experience-item">  
-<p>
-  Md Kausar Hamid Miji is currently pursuing an M.S. in Electrical Engineering in the Department of Electrical Engineering and Computer Science at the South Dakota School 
-  of Mines & Technology (SDSM&T). He previously completed an M.S. in Computer Science and Engineering from SDSM&T in May 2024. Mr. Kausar earned his bachelor’s 
-  degree in Electrical and Electronic Engineering from Chittagong University of Engineering & Technology in 2013.
-</p>
-
-<p>
-  After completing his undergraduate studies, Mr. Kausar joined the IT and telecommunications industry, where he served in various roles for eight years. During this time, 
-  he gained extensive hands-on experience in optical fiber networks, soft-switch systems, internet and telephone services, FTTx solutions, and cybersecurity.
-</p>
-
-<p>
-  In his graduate studies, Mr. Kausar focused on machine learning, system identification of dynamical systems using data-driven techniques, and the security 
-  of cyber-physical systems.
-</p>
-</div>
+      <div class="experience-item">  
+        <p>Md Kausar Hamid Miji is currently pursuing an M.S. in Electrical Engineering in the Department of Electrical Engineering and Computer Science at the South Dakota School of Mines & Technology (SDSM&T). He previously completed an M.S. in Computer Science and Engineering from SDSM&T in May 2024. Mr. Kausar earned his bachelor’s degree in Electrical and Electronic Engineering from Chittagong University of Engineering & Technology in 2013.</p>
+        <p>After completing his undergraduate studies, Mr. Kausar joined the IT and telecommunications industry, where he served in various roles for eight years. During this time, he gained extensive hands-on experience in optical fiber networks, soft-switch systems, internet and telephone services, FTTx solutions, and cybersecurity.</p>
+        <p>In his graduate studies, Mr. Kausar focused on machine learning, system identification of dynamical systems using data-driven techniques, and the security of cyber-physical systems.</p>
+      </div>
     </section>
 
-
-<!--**************************************************************************************************************** -->
-<!--Core Competencies Section -->
-<!--**************************************************************************************************************** -->
-<section id="CoreCompetency">
-  <h2>CORE COMPETENCIES & KNOWLEDGE</h2>
-  <div class="competency-grid">
-
-    <!-- Box 1 -->
-    <div class="competency-box box-blue">
-      <div class="competency-title">LEADERSHIP</div>
-      <div class="competency-content">
-        <p>Team Coordination</p>
-        <p>Technical Training</p>
-        <p>Empathy</p>
-        <p>Communication</p>
-        <p>Adaptive</p>
-        <p>Active Listening</p>
-        <p>Analytical</p>
+    <!-- Core Competencies -->
+    <section id="CoreCompetency">
+      <h2>CORE COMPETENCIES & KNOWLEDGE</h2>
+      <div class="competency-grid">
+        <div class="competency-box box-blue">
+          <div class="competency-title">LEADERSHIP</div>
+          <div class="competency-content">
+            <p>Team Coordination</p>
+            <p>Empathy</p>
+            <p>Communication</p>
+            <p>Active Listening</p>
+          </div>
+        </div>
+        <div class="competency-box box-green">
+          <div class="competency-title">SECURITY</div>
+          <div class="competency-content">
+            <p>IAM, RBAC, AAA</p>
+            <p>MS Defender</p>
+            <p>SIEM</p>
+            <p>Vulnerability Assessment</p>
+          </div>
+        </div>
+        <div class="competency-box box-yellow">
+          <div class="competency-title">NETWORKING</div>
+          <div class="competency-content">
+            <p>OSPF, BGP</p>
+            <p>VLAN, VPN</p>
+            <p>DNS, DHCP</p>
+            <p>Routing & Switching</p>
+          </div>
+        </div>
+        <div class="competency-box box-red">
+          <div class="competency-title">TELECOM</div>
+          <div class="competency-content">
+            <p>Optical Design</p>
+            <p>Capacity Planning</p>
+            <p>FTTH</p>
+            <p>PON, Backbone</p>
+          </div>
+        </div>
+        <div class="competency-box box-purple">
+          <div class="competency-title">PROGRAMMING</div>
+          <div class="competency-content">
+            <p>Python</p>
+            <p>C++</p>
+            <p>PowerShell</p>
+            <p>HTML & CSS</p>
+          </div>
+        </div>
+        <div class="competency-box box-blue">
+          <div class="competency-title">TOOLS</div>
+          <div class="competency-content">
+            <p>MATLAB</p>
+            <p>Power BI</p>
+            <p>Wireshark</p>
+            <p>AutoCAD</p>
+          </div>
+        </div>
+        <div class="competency-box box-green">
+          <div class="competency-title">DATA</div>
+          <div class="competency-content">
+            <p>Machine Learning</p>
+            <p>System ID</p>
+            <p>Data Analysis</p>
+            <p>Visualization</p>
+          </div>
+        </div>
+        <div class="competency-box box-yellow">
+          <div class="competency-title">CYBERSECURITY</div>
+          <div class="competency-content">
+            <p>NIST, GDPR</p>
+            <p>Pen Testing</p>
+            <p>Compliance</p>
+            <p>Risk Mgmt</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Box 2 -->
-    <div class="competency-box box-green">
-      <div class="competency-title">SECURITY ARCHITECTURE & COMPLIANCE</div>
-      <div class="competency-content">
-        <p>IAM, RBAC, AAA</p>
-        <p>MS Defender</p>
-        <p>SIEM</p>
-        <p>Vulnerability and Risk Assessment</p>
-        <p>Penetration Testing</p>
-        <p>NIST, GDPR, ISO 27001</p>
-      </div>
-    </div>
-
-    <!-- Box 3 -->
-    <div class="competency-box box-yellow">
-      <div class="competency-title">NETWORKING & INFRASTRUCTURES</div>
-      <div class="competency-content">
-        <p>OSPF, BGP, EIGRP</p>
-        <p>VLAN</p>
-        <p>VPN, DNS, DHCP</p>
-        <p>Routing, Switching</p>
-        <p>Aruba Networks</p>
-        <p>Cisco Routers/Switches</p>
-        <p>Firewalls</p>
-        <p>Remote Terminal Unit</p>
-      </div>
-    </div>
-
-    <!-- Box 4 -->
-    <div class="competency-box box-red">
-      <div class="competency-title">TELECOMMUNICATION TECHNOLOGIES</div>
-      <div class="competency-content">
-        <p>Optical Network Planning & Design</p>
-        <p>ODN Design</p>
-        <p>Capacity Planning</p>
-        <p>FTTH Topology Selection</p>
-        <p>Passive Optical Network (PON)</p>
-        <p>Route Optimization</p>
-        <p>VMware Fiber Backbone Architecture</p>
-        <p>Technical Standards Compliance</p>
-        <p>Fiber Pathway Analysis</p>       
-      </div>
-    </div>
-    </div>
   
-
-  <div class="competency-grid">
-    <!-- Box 5 -->
-    <div class="competency-box box-purple">
-      <div class="competency-title">PROGRAMMING LANGUAGES</div>
-      <div class="competency-content">
-        <p>Python</p>
-        <p>C++</p>
-        <p>C# (Basic)</p>
-        <p>Powershell</p>
-        <p>HTML</p>
-        <p>CSS</p>
-      </div>
-    </div>
-
-    <!-- Box 6 -->
-    <div class="competency-box box-blue">
-      <div class="competency-title">TOOLS & SOFTWARE</div>
-      <div class="competency-content">
-        <p>Anaconda</p>
-        <p>MATLAB</p>
-        <p>Active Directory</p>
-        <p>Wireshark</p>
-        <p>AutoCAD</p>
-        <p>Power BI</p>
-        <p>Power Automate</p>
-        <p>Power Apps</p>
-        <p>Visio</p>
-        <p>MS Project</p>
-        <p>Excel</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <!--**************************************************************************************************************** -->
 <!--Training & Certificate Section -->
 <!--**************************************************************************************************************** -->
