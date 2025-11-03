@@ -81,18 +81,16 @@
     }
 
     /* Profile Photo below Topbar */
-    .profile-picture {
+
+    /* Wrapper to center the frame */
+    .photo-wrapper {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      padding: 16px;
-      margin: 16px auto;
-      width: 450px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      background-color: #fff;
+      margin: 40px 0;
     }
 
+    /* The same photo frame you used before */
     .photo-container {
       width: 400px;
       height: 400px;
@@ -103,6 +101,7 @@
       overflow: hidden;
       border-radius: 8px;
       background-color: #f4f4f4;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional: adds same soft shadow */
     }
 
     .photo-container img {
@@ -210,8 +209,9 @@
     }
 
     @media (max-width: 768px) {
-      .main-content {
-        margin: 0 20px;
+      .photo-container {
+        width: 90%;
+        height: auto;
       }
       .core-values-grid {
         grid-template-columns: repeat(2, 120px);
@@ -260,8 +260,8 @@
     <!-- Profile Summary -->
     <section id="ProfileSummary">
       <h2>PROFILE SUMMARY</h2>
-      <div class=".profile-picture">
-        <div class="photo-container">
+        <div class="photo-wrapper">
+           <div class="photo-container">
            <img src="profile_pic.jpg" alt="Md Kausar Hamid Miji">
         </div>
       </div>
