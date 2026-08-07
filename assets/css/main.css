@@ -158,6 +158,44 @@ p { text-wrap: pretty; }
 }
 .skip-link:focus { left: 0; color: #fff; }
 
+
+/* --- Two-column splits: always collapse on narrow screens ------------------ */
+.split, .split-lead, .split-even, .split-media {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+.split       { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+.split-lead  { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+.split-even  { grid-template-columns: minmax(0, 1fr)   minmax(0, 1.15fr); }
+.split-media { grid-template-columns: minmax(0, 1fr)   minmax(0, 1.35fr); gap: 1.75rem; }
+@media (max-width: 900px) {
+  .split, .split-lead, .split-even { grid-template-columns: 1fr; }
+}
+@media (max-width: 780px) {
+  .split-media { grid-template-columns: 1fr; }
+}
+/* Numbered research item: index column + body */
+.split-num { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+@media (max-width: 520px) { .split-num { grid-template-columns: 1fr; gap: .35rem; } }
+
+.items-center { align-items: center; }
+.items-start  { align-items: start; }
+.self-start   { align-self: start; }
+
+/* --- Progressive-enhancement fallbacks for color-mix() -------------------- */
+@supports not (color: color-mix(in srgb, red 50%, blue)) {
+  .nav-list a[aria-current="page"] { background: #eef3fb; }
+  .chip-brand  { background: #e7eefb; }
+  .chip-cyan   { background: #dcf5fa; }
+  .chip-violet { background: #ede7fd; }
+  .chip-amber  { background: #fdf0dc; }
+  .site-header { background: #ffffff; }
+  .tl-item::before { box-shadow: 0 0 0 4px #eef3fb; }
+  .btn-ghost:hover { border-color: #b9c9e8; }
+  .card-hover:hover { border-color: #b9c9e8; }
+  input:focus, textarea:focus, select:focus { box-shadow: 0 0 0 3px #dbe6fa; }
+}
+
 /* --------------------------------------------------------------------------
    4. Typography components
    -------------------------------------------------------------------------- */
@@ -287,7 +325,7 @@ html[data-theme="dark"] .theme-toggle .moon { display: block; }
 .chip-brand { background: color-mix(in srgb, var(--brand) 11%, transparent); color: var(--brand); }
 .chip-cyan  { background: color-mix(in srgb, var(--cyan) 15%, transparent);  color: #0e7490; }
 .chip-violet{ background: color-mix(in srgb, var(--violet) 13%, transparent);color: #6d28d9; }
-.chip-amber { background: color-mix(in srgb, var(--amber) 15%, transparent); color: #b45309; }
+.chip-amber { background: color-mix(in srgb, var(--amber) 15%, transparent); color: #8a3d08; }
 .chip-row { display: flex; flex-wrap: wrap; gap: .45rem; }
 
 /* --------------------------------------------------------------------------

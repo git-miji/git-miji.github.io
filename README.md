@@ -89,6 +89,43 @@ copy if you want to regenerate rather than hand-edit.
 
 ---
 
+## Page inventory
+
+| Page | Purpose |
+|------|---------|
+| `index.html` | Home — hero, research focus, toolchain, selected work |
+| `research.html` | Five research threads, methodology workflow |
+| `simulations.html` | Filterable FDTD study gallery |
+| `publications.html` | Papers, preprints, talks, theses *(scaffolded)* |
+| `projects.html` | ML and modelling projects |
+| `Work_Experience.html` | Career timeline |
+| `about.html` | Biography and full skills matrix |
+| `leadership.html` | Fellowships, awards, service |
+| `contact.html` | Contact details and message form |
+| `404.html` | Not-found page |
+| `GHCNd/project_ghcnd.html` | GHCNd project overview |
+| `SysID/index.html` | Kolmogorov–Arnold network project overview |
+| `Vulnerable_and_outdated_Components/index.html` | Cybersecurity project overview |
+| `hero_banner.html` | Legacy URL — redirects to home |
+
+The two Jupyter exports (`GHCNd/ML_With_GHCNd.html`,
+`SysID/System_Identification.html`) are left as generated, with a slim
+"back to project" bar added at the top.
+
+---
+
+## Verification performed
+
+- All 14 designed pages: valid nesting, exactly one `<h1>`, full landmark set
+- Every internal link and image reference resolves on disk
+- Every image has `alt` text; every form control has a label; every button an accessible name
+- WCAG AA contrast verified for all 13 key colour pairs in **both** light and dark themes
+- No fixed-pixel widths; every multi-column grid has a mobile collapse rule
+- CSS braces balanced, no undefined custom properties; JS passes syntax check
+- `sitemap.xml`, `site.webmanifest` and the JSON-LD schema all parse
+
+---
+
 ## Things worth updating
 
 - [ ] Replace the six placeholder figures in `assets/figures/`
@@ -96,7 +133,8 @@ copy if you want to regenerate rather than hand-edit.
 - [ ] Add Google Scholar / ORCID / LinkedIn links (`publications.html`, `contact.html`)
 - [ ] Add thesis titles in `publications.html`
 - [ ] Optionally add a downloadable CV PDF and link it from `about.html`
-- [ ] `profile_pic.jpg` is 852 KB — compressing it to ~150 KB would speed first paint
+- [ ] `profile_pic.jpg` (836 KB) is no longer referenced — the pages now use the
+      optimised `assets/img/portrait.jpg` (66 KB). Delete the original if you do not need it.
 
 ---
 
